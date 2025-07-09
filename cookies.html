@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFoodHub Cookies Policy — Fast. Flavorful. Ready When You Are.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA; /* Clean White */
+            color: #212121; /* Midnight Black */
+        }
+        .text-primary-red { color: #E53935; }
+        .bg-primary-red { background-color: #E53935; }
+        .text-secondary-mustard { color: #FFEB3B; }
+        .bg-secondary-mustard { background-color: #FFEB3B; }
+        .text-dark-text { color: #212121; }
+        .bg-clean-white { background-color: #FAFAFA; }
+        .text-mint-green { color: #4CAF50; }
+        .bg-mint-green { background-color: #4CAF50; }
+
+        /* Custom styles for better aesthetics and responsiveness */
+        .container {
+            max-width: 1200px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E53935; /* Bold Tomato Red on hover */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #D32F2F; /* Darker red on hover */
+            transform: translateY(-2px);
+        }
+        .policy-section {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Cookie Consent Dialog */
+        #cookieConsent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #212121; /* Midnight Black */
+            color: #FAFAFA; /* Clean White */
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        #cookieConsent p {
+            margin: 0;
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        #cookieConsent button {
+            background-color: #E53935; /* Bold Tomato Red */
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        #cookieConsent button:hover {
+            background-color: #D32F2F; /* Darker red */
+        }
+        #cookieConsent .btn-decline {
+            background-color: #4CAF50; /* Fresh Mint Green */
+        }
+        #cookieConsent .btn-decline:hover {
+            background-color: #388E3C; /* Darker green */
+        }
+
+        /* Responsive adjustments for text and layout */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .grid-cols-1-md {
+                grid-template-columns: 1fr;
+            }
+            .grid-cols-2-lg {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-cols-3-xl {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            #cookieConsent {
+                padding: 1rem;
+            }
+            #cookieConsent .flex {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-clean-white text-dark-text">
+
+    <!-- Header and Navigation -->
+    <header class="bg-clean-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-red mb-4 md:mb-0">QuickFoodHub</a>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 space-x-3 text-lg font-semibold">
+                    <li><a href="index.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Home</a></li>
+                    <li><a href="blog.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Blog</a></li>
+                    <li><a href="privacy.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Privacy</a></li>
+                    <li><a href="terms.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Terms</a></li>
+                    <li><a href="cookies.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Cookies</a></li>
+                    <li><a href="contact.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cookies Policy Content Section -->
+    <section class="py-16 bg-clean-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="text-4xl font-bold text-center text-primary-red mb-12">QuickFoodHub Cookies Policy</h1>
+            <p class="text-gray-600 text-center mb-8"><em>Last Updated: July 7, 2025</em></p>
+
+            <div class="text-lg leading-relaxed text-gray-700 space-y-6">
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">1. Introduction to Our Cookies Policy</h2>
+                    <p>Welcome to QuickFoodHub. This Cookies Policy explains how QuickFoodHub ("we," "us," or "our") uses cookies and similar tracking technologies on our website, <a href="index.html" class="text-primary-red hover:underline">QuickFoodHub.com</a> (the "Site"). We are committed to transparency and providing you with clear information about how your data is collected and used. This policy should be read in conjunction with our <a href="privacy.html" class="text-primary-red hover:underline">Privacy Policy</a>, which provides more comprehensive details about how we collect, use, and protect your personal information. By continuing to browse and use our Site, you are agreeing to our use of cookies as described in this policy. If you do not agree to the use of cookies, you can manage your preferences as outlined in Section 5 of this document. Our aim is to enhance your user experience, personalize content, and understand how our Site is used, all while respecting your privacy and providing you with choices regarding data collection. We believe that a well-informed user is an empowered user, and this policy is designed to give you a detailed understanding of the role cookies play in your interaction with QuickFoodHub. We continuously review our practices and update this policy to reflect any changes in technology or regulatory requirements, ensuring our commitment to your privacy remains steadfast.</p>
+                    <p>The digital landscape is constantly evolving, and with it, the methods websites use to interact with users and gather data. Cookies are a fundamental part of this interaction, enabling a wide range of functionalities that make your online experience smoother and more personalized. At QuickFoodHub, we leverage these technologies not to intrude on your privacy, but to optimize our services, deliver relevant content, and analyze site performance in an aggregated and anonymized manner. This detailed policy serves as your guide to understanding the various categories of cookies we deploy, from those strictly necessary for the Site's operation to those that help us understand user behavior or deliver targeted advertisements. We will explain the specific purposes behind each type, providing examples of how they contribute to your overall experience. Furthermore, we will delve into the distinction between first-party and third-party cookies, highlighting the different entities that might place them on your device. Our commitment extends to empowering you with the knowledge and tools to manage your cookie preferences effectively across different browsers and platforms. We recognize that control over your digital footprint is paramount, and this policy is crafted to ensure you have the necessary information to make informed decisions about your cookie settings. We encourage you to read this policy thoroughly to gain a complete understanding of our cookie practices and how they align with our dedication to user privacy and a superior online experience.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">2. What Are Cookies? A Comprehensive Overview</h2>
+                    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site. Think of a cookie as a tiny memory for the website, allowing it to "remember" certain information about your visit. This could range from your login status to your language preferences or items in a shopping cart. Cookies are not programs and cannot carry viruses or install malware on your computer. They are simply passive data files that store information. When you revisit a website, your browser sends the cookie back to the server, which then uses the information to tailor your experience. This mechanism is fundamental to how most modern websites function, enabling a personalized and efficient browsing experience. Without cookies, a website would treat you as a new visitor every time you navigate to a different page, making tasks like online shopping or staying logged in incredibly cumbersome. Understanding the basic mechanics of cookies is the first step towards comprehending their role in your online interactions and how they contribute to the functionality and personalization of platforms like QuickFoodHub.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">2.1 Session Cookies vs. Persistent Cookies</h3>
+                    <p>Cookies can be categorized based on their duration:</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Session Cookies:</strong> These are temporary cookies that remain on your device only for the duration of your browsing session. They are automatically deleted from your computer or mobile device when you close your web browser. Session cookies are primarily used to enable basic website functionality, such as keeping you logged in as you navigate between different pages, or remembering items you've added to a shopping cart during a single visit. Without session cookies, features like remembering your login status would be impossible, requiring you to re-authenticate on every new page, which would severely degrade the user experience. They are crucial for maintaining state across different requests within a single user session. For example, when you add a recipe to your favorites list on QuickFoodHub, a session cookie might temporarily store this action until you close your browser. Their ephemeral nature means they do not store long-term information about your browsing habits.</li>
+                        <li><strong>Persistent Cookies:</strong> These cookies remain on your device for a longer, specified period, even after you close your browser. The duration can vary greatly, from a few hours to several years, depending on the cookie's purpose and its expiration date set by the website. Persistent cookies are used to remember your preferences, settings, and login details for future visits, making your experience more convenient and personalized. For instance, if you select a language preference on QuickFoodHub, a persistent cookie might store this choice so that the site automatically loads in your preferred language next time. They are also widely used for analytics, remembering user segments, and delivering targeted advertising based on your past browsing behavior. This type of cookie plays a significant role in creating a consistent and tailored experience across multiple visits to a website. They allow websites to recognize you as a returning visitor and adapt content accordingly, which is essential for features like personalized recommendations or remembering your site settings.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">2.2 First-Party Cookies vs. Third-Party Cookies</h3>
+                    <p>Cookies can also be categorized based on their origin:</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>First-Party Cookies:</strong> These cookies are set directly by the website you are visiting (i.e., QuickFoodHub.com). They are generally used to enable core functionalities of the site, such as remembering your login status, language preferences, or items in your shopping cart. First-party cookies are crucial for the basic operation and personalization of the website you are actively engaging with. They allow QuickFoodHub to understand how you interact with our content and features directly, helping us to improve navigation, remember your preferences, and provide a more intuitive user experience. For example, if you customize your recipe search filters, a first-party cookie might remember these settings for your next visit. They are typically seen as less privacy-invasive because they are controlled by the site you are visiting.</li>
+                        <li><strong>Third-Party Cookies:</strong> These cookies are set by a domain other than the one you are visiting. They are typically used for advertising, analytics, and social media integration. For example, if QuickFoodHub uses Google Analytics, Google might place a third-party cookie on your device to collect data about your browsing behavior on our Site. Similarly, if a social media "Like" button is embedded on our page, the social media platform might set a third-party cookie. These cookies enable cross-site tracking, allowing third parties to build a profile of your interests based on your browsing across different websites that use their services. While they provide valuable insights for us (e.g., understanding traffic sources or ad effectiveness), they are also the primary focus of privacy concerns due to their ability to track users across multiple sites. We aim to be transparent about the third-party cookies present on our Site and provide you with options to manage them. Understanding the distinction between first-party and third-party cookies is vital for making informed decisions about your online privacy and managing your cookie preferences effectively.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">3. How QuickFoodHub Uses Cookies: Detailed Purposes</h2>
+                    <p>QuickFoodHub uses cookies for a variety of purposes to ensure our Site functions effectively, provides a personalized experience, and helps us understand how we can better serve our users. Each type of cookie serves a distinct function, contributing to the overall efficiency and relevance of your interaction with our platform. We categorize our cookie usage into several key areas, ensuring that you have a clear understanding of why each cookie is placed on your device. Our commitment to data minimization means we only use cookies that are necessary for the stated purposes, and we continuously evaluate our cookie practices to align with industry best standards and privacy regulations. Below, we delve into the specific categories of cookies we employ and their detailed functionalities, providing you with comprehensive insight into our data collection methods and their benefits to your QuickFoodHub experience.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.1 Strictly Necessary Cookies (Essential Cookies)</h3>
+                    <p>These cookies are absolutely essential for the website to function properly and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, certain core functionalities of the Site would not be available. For example, if you add items to a shopping cart, a strictly necessary cookie remembers those items as you navigate to the checkout page. They do not store any personally identifiable information. These cookies are session-based and are typically deleted once you close your browser. Their primary role is to enable the basic, expected behavior of the website, ensuring a smooth and uninterrupted browsing experience. Disabling these cookies would severely impact the usability of the Site, potentially preventing you from accessing secure areas or completing essential tasks like account management or content submission. We do not require your explicit consent for these cookies as they are fundamental to providing the service you have requested.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>User Authentication:</strong> These cookies keep you logged into your QuickFoodHub account as you navigate through different pages. Without them, you would have to re-enter your login credentials every time you click on a new link, making the site unusable for logged-in users. They ensure a persistent and secure session.</li>
+                        <li><strong>Security:</strong> Essential cookies can help detect and prevent fraudulent activity, ensuring the security of your account and our platform. They might be used to identify unusual login attempts or suspicious behavior, protecting both you and QuickFoodHub from potential threats.</li>
+                        <li><strong>Load Balancing:</strong> These cookies distribute network traffic across multiple servers to optimize website performance and ensure stability. This prevents any single server from becoming overloaded, leading to a faster and more reliable experience for all users, especially during high traffic periods.</li>
+                        <li><strong>Cookie Consent Management:</strong> A cookie is used to remember your cookie preferences (e.g., if you have accepted or declined non-essential cookies) so that you are not asked for consent repeatedly on subsequent visits. This ensures compliance with privacy regulations and respects your choices.</li>
+                        <li><strong>Form Submissions:</strong> When you fill out a form (e.g., contact form, registration form), these cookies ensure that the data is correctly processed and submitted, preventing data loss if there's a temporary network issue.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.2 Performance and Analytics Cookies</h3>
+                    <p>These cookies collect information about how visitors use our Site, such as which pages are visited most often, how users navigate through the site, and if they receive error messages from web pages. This information is used to improve how our website works and to understand what content is most popular and engaging. These cookies typically collect aggregated and anonymous data, meaning they do not identify you personally. They help us measure the effectiveness of our design, content, and features, allowing us to make data-driven decisions for optimization. For example, if we notice a particular recipe page has a high bounce rate, we might investigate its content or layout to improve user engagement. These insights are crucial for enhancing the overall user experience and ensuring that QuickFoodHub remains a valuable resource for fast and flavorful cooking inspiration. We use third-party analytics services like Google Analytics for this purpose. The data collected helps us identify trends, understand user demographics (in an aggregated form), and track the performance of our marketing efforts. This continuous analysis allows us to refine our content strategy and make our Site more intuitive and user-friendly. We strive to anonymize this data as much as possible to protect your privacy while still gaining valuable insights.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Site Usage Analysis:</strong> These cookies track how you interact with our Site, including the pages you visit, the links you click, and the time you spend on each page. This helps us understand user behavior patterns, identify popular content, and pinpoint areas for improvement in navigation and content delivery.</li>
+                        <li><strong>Traffic Source Tracking:</strong> We use these cookies to understand where our website traffic comes from (e.g., search engines, social media, direct links). This helps us evaluate the effectiveness of our marketing channels and optimize our outreach efforts to attract more users seeking quick culinary solutions.</li>
+                        <li><strong>Error Reporting:</strong> In the event of technical issues or errors on the Site, these cookies can help us identify and diagnose problems by tracking error messages and the user flow leading up to them. This allows our technical team to quickly resolve issues and improve site stability.</li>
+                        <li><strong>A/B Testing:</strong> Sometimes, we may test different versions of a page or feature to see which performs better. Performance cookies help us track user interactions with these different versions, allowing us to make informed decisions about design and functionality improvements based on real user data.</li>
+                        <li><strong>Content Optimization:</strong> By analyzing which recipes or blog posts are most frequently viewed, shared, or saved, we can tailor our content strategy to produce more of what our audience loves. This ensures QuickFoodHub remains highly relevant and valuable to its users.</li>
+                        <li><strong>Session Recording (Anonymized):</strong> In some cases, we might use tools that record anonymized user sessions to visually understand user journeys and identify usability issues. This data is fully anonymized and used strictly for improving the user interface and experience.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.3 Functionality Cookies</h3>
+                    <p>Functionality cookies allow our Site to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. For example, QuickFoodHub might remember your preferred units of measurement for recipes (e.g., metric vs. imperial) or your preferred language settings, so you don't have to select them every time you visit. These cookies can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize. They may also be used to provide services you have asked for, such as watching a video or commenting on a blog post. The information these cookies collect may be anonymized, and they cannot track your browsing activity on other websites. Their purpose is to enhance your convenience and personalize your experience on QuickFoodHub, making your interactions more efficient and tailored to your individual needs. They store information that improves the user experience beyond basic site navigation, offering a more customized and seamless interaction with our content and features. By remembering your preferences, these cookies save you time and effort, contributing to a more enjoyable and productive visit to our Site.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Remembering User Preferences:</strong> These cookies store your preferred settings, such as theme choices, font sizes, or specific filters applied to recipe searches, so that your preferences are maintained across visits. This eliminates the need to reconfigure settings each time you return to the Site.</li>
+                        <li><strong>Login Persistence:</strong> While strictly necessary cookies handle the immediate login session, functionality cookies can remember your login status for a longer period (e.g., "remember me" functionality), allowing you to stay logged in across multiple sessions for convenience.</li>
+                        <li><strong>Personalized Content Delivery:</strong> Based on your past interactions, these cookies might help deliver personalized recipe recommendations or highlight content that aligns with your demonstrated interests, making your QuickFoodHub experience more relevant.</li>
+                        <li><strong>Interactive Feature Memory:</strong> If you interact with features like the "Ingredient Swap Tool" or "Quick Meal Generator," these cookies might remember your last inputs or generated suggestions to provide continuity in your experience.</li>
+                        <li><strong>Region-Specific Content:</strong> In the future, if QuickFoodHub offers region-specific content or promotions, functionality cookies could remember your geographical location to deliver relevant localized information.</li>
+                        <li><strong>Video Playback Preferences:</strong> If our Site includes embedded videos, these cookies might remember your volume settings or playback progress for a more seamless viewing experience.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.4 Targeting and Advertising Cookies</h3>
+                    <p>These cookies are used to deliver advertisements more relevant to you and your interests. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information is shared with other organizations, such as advertisers. Quite often, targeting or advertising cookies will be linked to site functionality provided by the other organization. These cookies track your browsing habits across different websites and build a profile of your interests. This profile is then used to show you targeted ads that are more likely to be relevant to you. For example, if you visit a cooking appliance website, an advertising cookie might remember this and show you ads for cooking appliances on QuickFoodHub. While we strive to show relevant ads, we do not control the content of these third-party advertisements. These cookies also help us measure the effectiveness of our advertising campaigns and understand how users respond to our promotions. They can limit the number of times you see an advertisement and help measure the effectiveness of the advertising campaign. QuickFoodHub uses these cookies to support our operations and provide free content, as advertising is a common revenue model for online platforms. We are committed to ensuring that our advertising practices are respectful of your privacy and provide you with options to manage your preferences. The data collected by these cookies is typically anonymized or pseudonymized, meaning it does not directly identify you but rather tracks your device or browser. We work with reputable advertising partners who adhere to industry standards for data privacy and advertising ethics. Understanding how these cookies function is crucial for managing your online privacy and controlling the types of advertisements you encounter across the web. We provide mechanisms for you to opt out of targeted advertising, as detailed in Section 5 of this policy, ensuring you have control over your ad experience.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Behavioral Advertising:</strong> These cookies track your browsing history and activity across various websites to create a profile of your interests. This profile is then used by advertising networks to deliver highly targeted advertisements that are more likely to appeal to you, based on your past online behavior.</li>
+                        <li><strong>Retargeting/Remarketing:</strong> If you visit QuickFoodHub and then leave, retargeting cookies might show you QuickFoodHub ads on other websites you visit. This reminds you about our content and encourages you to return to our Site, for example, to finish browsing recipes you were interested in.</li>
+                        <li><strong>Campaign Performance Measurement:</strong> These cookies help us and our advertising partners measure the effectiveness of specific advertising campaigns. They track metrics like ad impressions, clicks, and conversions (e.g., signing up for a newsletter after seeing an ad), allowing us to optimize our marketing spend.</li>
+                        <li><strong>Frequency Capping:</strong> To prevent users from seeing the same advertisement too many times, these cookies can limit the number of times a specific ad is displayed to a single user, improving the user experience and ad relevance.</li>
+                        <li><strong>Affiliate Marketing:</strong> If QuickFoodHub participates in affiliate programs, these cookies might track referrals from our Site to partner sites, ensuring that we receive appropriate commission for sales generated through our links.</li>
+                        <li><strong>Contextual Advertising:</strong> While less common for behavioral tracking, some advertising cookies might serve ads based on the content of the page you are currently viewing (e.g., showing cooking ads on a recipe site), rather than your long-term browsing history.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.5 Social Media Cookies</h3>
+                    <p>QuickFoodHub integrates with various social media platforms to allow you to share our content, connect with us, and see relevant content from these platforms. Social media cookies are set by social media services that we have added to the Site to enable you to share our content with your friends and networks. These cookies are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. For example, if you click a "Like" button for a QuickFoodHub recipe, the social media platform might place a cookie to remember this interaction and potentially show you more food-related content on their platform. We do not control these third-party social media cookies, and their use is governed by the privacy policies of the respective social media platforms. We encourage you to review the privacy policies of any social media platforms you use to understand their data collection practices. While these cookies enhance your ability to interact with QuickFoodHub content on social platforms, they also contribute to cross-site tracking, which is why we provide you with options to manage your cookie preferences. Your interaction with social media features on our Site is subject to the terms and conditions and privacy policies of those specific social media platforms. We provide these integrations to enhance social sharing and community engagement, but we respect your choice to manage these cookies according to your privacy preferences.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Sharing Functionality:</strong> These cookies enable the "Share" or "Like" buttons for platforms like Facebook, Twitter, Pinterest, and Instagram to function correctly, allowing you to easily share QuickFoodHub recipes and articles with your social network.</li>
+                        <li><strong>User Tracking for Social Media Advertising:</strong> Social media platforms may use these cookies to track your activity on QuickFoodHub and other sites to deliver targeted advertisements to you on their platforms, based on your interests.</li>
+                        <li><strong>Embedding Content:</strong> If we embed content from social media platforms (e.g., a YouTube video or an Instagram post), these platforms may set cookies to track your interaction with that embedded content.</li>
+                        <li><strong>Login Integration:</strong> If QuickFoodHub offers the option to log in using your social media accounts, these cookies facilitate that process, remembering your social media login status for seamless access.</li>
+                        <li><strong>Analytics for Social Media Campaigns:</strong> Social media cookies can also provide us with aggregated, anonymized data about how users interact with our content shared on social platforms, helping us to refine our social media strategy.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">3.6 Other Specific Cookie Types and Technologies</h3>
+                    <p>Beyond the primary categories, QuickFoodHub may also utilize other specific types of cookies and similar technologies to enhance functionality, security, and user experience. These tools are often specialized for particular tasks and contribute to the overall robustness and efficiency of our Site. Understanding these additional technologies provides a more complete picture of our data practices and how we strive to deliver a seamless and secure environment for your culinary inspiration journey. Our commitment to transparency extends to all forms of data collection, ensuring you are fully informed about every aspect of our cookie usage. We continuously evaluate new technologies to ensure they align with our privacy principles and enhance the user experience without compromising data security. This detailed breakdown aims to cover the breadth of technologies that might be employed on QuickFoodHub, providing you with granular insight into our operational mechanisms.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Security Cookies:</strong> These cookies are crucial for security purposes, helping to authenticate users, prevent fraudulent use of login credentials, and protect user data from unauthorized parties. They are vital for maintaining the integrity and safety of our Site, especially for features requiring user accounts.</li>
+                        <li><strong>A/B Testing Cookies:</strong> When we test new features or design elements to improve the user experience, A/B testing cookies ensure that users consistently see the same version of the site during a test. This allows us to accurately measure the performance of different variations and make data-driven decisions.</li>
+                        <li><strong>Video Player Cookies:</strong> If QuickFoodHub embeds videos from platforms like YouTube or Vimeo, these third-party services may set cookies to remember your video playback preferences (e.g., volume, quality) or to track your viewing behavior for their own analytics and advertising purposes.</li>
+                        <li><strong>Content Delivery Network (CDN) Cookies:</strong> CDNs are used to deliver website content (like images and videos) faster by caching them on servers closer to your location. CDN cookies may be used to identify the most efficient server for content delivery or to track usage for billing purposes.</li>
+                        <li><strong>Flash Cookies (Local Shared Objects):</strong> While less common now, some older multimedia content might use Flash cookies. These can store more data than regular cookies and are managed differently. QuickFoodHub primarily uses modern web technologies, but it's important to be aware of their existence.</li>
+                        <li><strong>Pixel Tags / Web Beacons:</strong> These are tiny graphics (also known as "clear GIFs" or "tracking pixels") that may be included on our Site or in our emails. They are used to track user actions, such as whether an email has been opened or a page has been viewed, helping us measure the effectiveness of our communications and content.</li>
+                        <li><strong>Local Storage (HTML5):</strong> Modern web browsers support "local storage," which allows websites to store data directly in the browser, similar to cookies but with larger storage capacity and no expiration date. QuickFoodHub may use local storage to remember user preferences or store temporary data for faster loading times.</li>
+                        <li><strong>Referrer Cookies:</strong> These cookies track the website or link that referred you to QuickFoodHub. This information is crucial for us to understand our traffic sources and the effectiveness of our partnerships or marketing campaigns.</li>
+                        <li><strong>User ID Cookies:</strong> For registered users, a unique, anonymous ID might be stored in a cookie to link your browsing activity across sessions without directly exposing your personal information. This helps in providing a consistent and personalized experience.</li>
+                        <li><strong>Affiliate Cookies:</strong> If QuickFoodHub partners with other websites or services, affiliate cookies may be used to track if a user was referred from an affiliate partner, ensuring proper attribution for any sales or sign-ups.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">4. Third-Party Cookies on QuickFoodHub</h2>
+                    <p>As mentioned, some cookies on our Site are placed by third parties. These third-party cookies are not controlled by QuickFoodHub, and their use is governed by the privacy policies of the respective third-party providers. We integrate these services to enhance our Site's functionality, provide analytics, and support our advertising efforts. While we select our partners carefully, we cannot be responsible for the privacy practices of these external sites. We encourage you to review their individual privacy and cookie policies to understand their data collection and usage practices. Below is a list of some common third-party services that may set cookies on your device when you visit QuickFoodHub, along with a brief explanation of their purpose. This list is not exhaustive but aims to cover the most prevalent third-party integrations. We strive to work with reputable partners who adhere to industry standards and data protection regulations, but your direct control over these cookies is primarily through your browser settings or specific opt-out mechanisms provided by the third parties themselves. Understanding these external influences on your cookie data is a key aspect of managing your online privacy effectively.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Google Analytics:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. It uses cookies to collect information about how visitors use our Site, including the number of visitors, where they came from, and the pages they visited. This data is aggregated and anonymized, helping us understand user behavior and improve our website's performance and content. It provides insights into user demographics, interests, and device types, which allows us to optimize our site for various user segments. Google Analytics helps us identify popular content, user navigation paths, and potential areas for improvement in user experience. The cookies collect information in a way that does not directly identify anyone. You can find more information about Google's privacy practices and how to opt out of Google Analytics at Google's Privacy Policy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> IP address (anonymized), device information, browser type, operating system, pages visited, time spent on pages, referral source, interactions with site elements. This data is used to generate reports on website activity and internet usage.</p>
+                        </li>
+                        <li><strong>Google Ads (formerly Google AdWords):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Google Ads cookies are used to deliver targeted advertising to you based on your interests and browsing history across Google's advertising network. They help us measure the effectiveness of our advertising campaigns and track conversions (e.g., if you signed up for our newsletter after clicking a Google Ad). These cookies enable remarketing, allowing us to show you ads for QuickFoodHub on other websites you visit after leaving our site. They also help to prevent you from seeing the same ad too many times and ensure ad relevance. Google's advertising technology allows for a highly personalized ad experience, which can be beneficial for both users (seeing relevant ads) and advertisers (reaching interested audiences). For more information on Google Ads and how to manage your ad preferences, please visit Google's Ads Settings.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad interactions (clicks, impressions), browsing behavior across sites using Google Ads, conversion data. This data is linked to a unique, anonymous identifier on your browser.</p>
+                        </li>
+                        <li><strong>Facebook Pixel:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> The Facebook Pixel is an analytics tool that allows us to measure the effectiveness of our advertising by understanding the actions people take on our website. It uses cookies to track user interactions, such as page views, sign-ups, and purchases, after they have seen or clicked on a Facebook ad. This helps us to deliver more relevant ads to you on Facebook and Instagram, build custom audiences for future advertising, and measure the return on investment of our ad campaigns. The pixel also helps us understand the demographics and interests of our website visitors who are also Facebook users, allowing for better content and ad targeting. It's a powerful tool for optimizing our social media marketing efforts. For more information on Facebook's data practices and how to manage your ad preferences, please visit Facebook's Data Policy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User actions on the site (e.g., page views, button clicks), device type, time of visit, IP address. This data is matched with Facebook user profiles to provide insights and target ads.</p>
+                        </li>
+                        <li><strong>YouTube (Google LLC):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If we embed YouTube videos on our Site, YouTube may set cookies on your device. These cookies are used to track video viewing preferences (e.g., volume settings, playback quality), remember viewing history, and deliver targeted advertisements on YouTube and across Google's network. They also collect data for YouTube's own analytics purposes, helping them understand video performance and user engagement. YouTube cookies ensure a seamless video playback experience and contribute to their content recommendation algorithms. Even if you don't interact with the video, simply loading the page with an embedded video might trigger these cookies. For more information, refer to Google's Privacy Policy, which also covers YouTube.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Video viewing history, playback preferences, device information, IP address. This data is used for personalization, analytics, and advertising within the YouTube ecosystem.</p>
+                        </li>
+                        <li><strong>Pinterest Tag:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Similar to the Facebook Pixel, the Pinterest Tag uses cookies to help us track the actions of visitors on our Site who have come from Pinterest or interacted with our Pinterest ads. This allows us to measure the effectiveness of our Pinterest marketing campaigns, create custom audiences for future ads on Pinterest, and understand which content resonates best with Pinterest users. It helps us optimize our presence on Pinterest and ensures that our recipe and food inspiration content reaches the most relevant audience on that platform. For more information on Pinterest's data practices, please visit Pinterest's Privacy Policy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User actions on the site (e.g., page views, sign-ups), device type, time of visit. This data is matched with Pinterest user profiles for ad targeting and analytics.</p>
+                        </li>
+                        <li><strong>Cloudflare:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub uses Cloudflare for performance and security. Cloudflare may set cookies (e.g., `__cfduid`) to identify individual clients behind a shared IP address and apply security settings on a per-client basis. This helps protect our Site from malicious attacks and ensures faster content delivery. These cookies are primarily for security and operational purposes and do not track personal information for advertising or behavioral profiling. They are essential for the smooth and secure operation of our website, acting as a protective layer against various online threats like DDoS attacks. For more information, please refer to Cloudflare's Privacy Policy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Limited technical data related to network traffic and security, typically not personally identifiable.</p>
+                        </li>
+                        <li><strong>Content Management System (CMS) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Our website is built on a Content Management System (CMS), which may use its own set of cookies to manage user sessions, remember administrative logins (if applicable), and facilitate content delivery. These cookies are generally first-party and strictly necessary for the CMS to function correctly, ensuring that the content you see is displayed properly and that our internal teams can manage the site efficiently. They help maintain the integrity and consistency of the website's content and structure. For example, if you are a site administrator, these cookies would keep you logged into the CMS backend.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Session IDs, login status (for administrators), content display preferences. Generally non-personally identifiable for public users.</p>
+                        </li>
+                        <li><strong>Embedded Content Cookies (e.g., from other blogs, news sites):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Occasionally, QuickFoodHub may embed content from other websites (e.g., an article snippet, an infographic, or a poll). When you interact with or simply view this embedded content, the originating third-party website may set its own cookies. These cookies are entirely outside of QuickFoodHub's control and are governed by the cookie policy of the third-party site. They might be used for analytics, advertising, or to remember your preferences on that specific external service. We advise caution and encourage you to review the privacy and cookie policies of any external content sources you encounter on our Site. We strive to only embed content from reputable sources, but your interaction with their cookies is direct. This is a common practice across the internet for content enrichment.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Varies widely depending on the embedded content provider; could include browsing behavior, device info, IP address.</p>
+                        </li>
+                        <li><strong>Affiliate Tracking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub participates in affiliate marketing programs, these cookies are used to track when a user clicks on an affiliate link on our Site and subsequently makes a purchase or performs another desired action on the affiliate partner's website. This allows the affiliate program to attribute the conversion to QuickFoodHub and calculate commissions. These cookies are essential for the financial sustainability of our Site if we engage in such partnerships. They typically have a set lifespan and only track the specific referral event, not your general browsing habits across unrelated sites. They are designed to ensure fair compensation for referrals. For example, if we link to a specific cooking product on an e-commerce site, an affiliate cookie would track if you purchase that product after clicking our link.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Referral source, timestamp of click, conversion event (e.g., purchase ID). Usually pseudonymized.</p>
+                        </li>
+                        <li><strong>User-Generated Content Platform Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub implements features that allow users to upload or manage their own content (e.g., profile pictures, recipe submissions), the underlying platform for this functionality might use cookies to manage user sessions, upload progress, or content display preferences. These could be first-party or third-party depending on the specific service used. Their aim is to ensure a smooth and functional experience for users contributing content to the Site. They help maintain the integrity of user submissions and provide a consistent interface for content management. These cookies ensure that your contributions are correctly attributed and managed within the QuickFoodHub ecosystem.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User session data, content upload status, display preferences for user-generated content. May be linked to user accounts.</p>
+                        </li>
+                        <li><strong>Advertising Exchange/DSP Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond direct ad networks, QuickFoodHub may participate in advertising exchanges or use Demand-Side Platforms (DSPs) to manage ad inventory. These platforms use cookies to facilitate real-time bidding for ad placements, optimize ad delivery, and manage user segments across a wider network of websites. They are highly sophisticated and contribute to the programmatic advertising ecosystem, aiming to show you the most relevant ads at the right time. These cookies are a core component of how online advertising is bought and sold, enabling a dynamic and efficient marketplace for digital ads. They track user IDs and interests to match them with available ad slots. For more information, industry bodies like the Digital Advertising Alliance (DAA) provide resources on opting out.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User IDs, browsing history, inferred interests, ad interaction data. Primarily pseudonymized for targeting.</p>
+                        </li>
+                        <li><strong>Customer Relationship Management (CRM) Integration Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub integrates a CRM system to manage customer interactions (e.g., support tickets, newsletter subscriptions), these integrations might use cookies to track user interactions with our communication channels. This helps us provide more personalized and efficient customer service, ensuring that your past interactions are remembered and your queries are handled effectively. These cookies help us to streamline our customer service processes and provide a more cohesive user experience across different touchpoints. They allow us to understand your history with QuickFoodHub, leading to more informed and personalized support.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Interaction history with support, communication preferences, user segment data. Linked to user accounts for personalized service.</p>
+                        </li>
+                        <li><strong>Survey and Feedback Tool Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> When QuickFoodHub uses third-party tools to conduct surveys or collect user feedback, these tools may set cookies to ensure that you are not prompted to take the same survey multiple times, or to remember your responses if the survey is multi-page. They help us gather valuable insights into user satisfaction and preferences, allowing us to improve our services based on direct feedback. These cookies are crucial for managing the survey experience and ensuring data integrity. They prevent repetitive prompts and ensure a smooth feedback collection process. For example, a cookie might remember that you have already completed a specific recipe feedback survey.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Survey participation status, partial survey responses, user ID (if logged in). Generally anonymized for analysis.</p>
+                        </li>
+                        <li><strong>Website Personalization Engine Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may use third-party personalization engines to deliver dynamic content tailored to your browsing behavior and preferences. These cookies track your interactions on the Site (e.g., recipes viewed, categories explored) to recommend similar content, highlight relevant features, or adjust the layout to better suit your interests. This aims to create a highly individualized and engaging user experience, making QuickFoodHub feel more intuitive and relevant to your culinary journey. These cookies are designed to enhance your discovery of new content and features that align with your demonstrated interests. They create a unique profile of your preferences on our site to deliver a bespoke browsing experience.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Browsing history on QuickFoodHub, content interaction data, user segment. Pseudonymized and used for on-site personalization.</p>
+                        </li>
+                        <li><strong>Security and Fraud Detection Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic security, some third-party services specialize in advanced fraud detection and bot mitigation. These services may set cookies to analyze user behavior patterns for anomalies, identify potential security threats, or distinguish between human users and automated bots. This helps protect QuickFoodHub from malicious activity, ensuring a safe and fair environment for all users. These cookies are vital for maintaining the security and integrity of our platform, protecting against various forms of cyber threats. They help to identify and block suspicious traffic, safeguarding user data and site resources. For example, they might detect rapid, automated requests that indicate a bot attack.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Behavioral patterns, IP address, device fingerprints. Used for anomaly detection and security scoring.</p>
+                        </li>
+                        <li><strong>Video Analytics Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub hosts or embeds videos from third-party video hosting platforms (e.g., Wistia, Vimeo, Brightcove), these platforms use cookies to collect detailed analytics on video performance. This includes metrics like watch time, completion rates, re-watches, and geographic distribution of viewers. This data helps us understand how engaging our video content is and how we can improve our video strategy. These cookies are crucial for understanding user engagement with multimedia content and optimizing video delivery. They provide granular insights into how users interact with our video recipes and demonstrations.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Video playback metrics, user location (approximate), device type. Aggregated for reporting.</p>
+                        </li>
+                        <li><strong>Chatbot and Live Support Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub implements a chatbot or live chat support feature provided by a third-party service, these services may use cookies to remember your chat history, user ID, and session details. This ensures continuity in your support conversations and allows our support agents to provide more personalized and efficient assistance. These cookies are essential for maintaining the state of your conversation and providing a seamless support experience. They prevent the need for you to repeat information if you switch pages or return to the chat later. For example, a cookie might remember your previous questions to a chatbot.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Chat session ID, conversation history (within the tool), user ID (if logged in). Used for support continuity.</p>
+                        </li>
+                        <li><strong>Push Notification Service Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub offers browser push notifications (e.g., for new recipes or updates), a third-party push notification service may use cookies to manage your subscription status and deliver notifications to your device. These cookies ensure that notifications are sent to the correct user and device, and they help us track the effectiveness of our notification campaigns. These cookies are fundamental to the operation of browser-based push notifications, allowing us to send timely updates directly to your desktop or mobile device, even when you are not actively browsing our site. They manage your consent and delivery preferences for these notifications.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Subscription status for notifications, unique device ID (for notification delivery). Generally anonymous unless linked to user account.</p>
+                        </li>
+                        <li><strong>Ad Verification and Brand Safety Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Advertisers and publishers often use third-party services for ad verification and brand safety. These services use cookies to ensure that ads are displayed to real users (not bots), that they are visible, and that they appear on appropriate content (brand safety). This helps maintain the integrity of the advertising ecosystem and protects our brand reputation. These cookies are vital for ensuring the quality and effectiveness of advertising displayed on our site, providing assurance to advertisers that their campaigns are reaching genuine audiences in suitable environments. They help to prevent ad fraud and ensure compliance with brand guidelines.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad impression data, viewability metrics, site content analysis (for safety). Primarily aggregated and anonymized.</p>
+                        </li>
+                        <li><strong>Personalization and Recommendation Engine Cookies (beyond basic functionality):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some advanced personalization engines, often third-party, use sophisticated algorithms and cookies to analyze your deep browsing patterns and preferences across our site. This goes beyond simple remembering of settings; it's about predicting what content you might like next, suggesting recipes based on your past views, or tailoring the entire site layout to your inferred interests. These cookies aim to create a hyper-personalized experience, making QuickFoodHub feel uniquely designed for you. They are crucial for driving engagement and content discovery, ensuring that you always find something new and relevant. These engines learn from your interactions to continuously refine their recommendations, making your culinary journey more efficient and enjoyable.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed browsing history on QuickFoodHub, content interaction data, time spent on pages, inferred interests. Pseudonymized for personalization.</p>
+                        </li>
+                        <li><strong>Audience Measurement Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Third-party audience measurement services use cookies to collect data on the overall size and composition of our website audience. This data is used to provide aggregated reports to advertisers and industry bodies, helping them understand market trends and media consumption habits. These cookies contribute to broader industry research and are typically highly anonymized, focusing on demographic and interest segments rather than individual identification. They help to quantify the reach and impact of our content within the broader digital landscape, providing valuable insights for strategic planning and content distribution. This data is crucial for understanding our market position.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Aggregated demographic data, browsing behavior (anonymized), user segments. Used for industry reporting.</p>
+                        </li>
+                        <li><strong>Debugging and Error Logging Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> When technical issues arise, third-party debugging and error logging services may use cookies to track specific user sessions where errors occurred. This helps our development team identify the root cause of bugs, replicate issues, and implement fixes more quickly. These cookies are essential for maintaining the stability and reliability of our Site, ensuring a smooth experience for all users. They record technical data related to crashes, performance bottlenecks, or unexpected behavior, allowing for rapid problem resolution. This proactive monitoring helps us to keep QuickFoodHub running smoothly and efficiently.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Session IDs, error codes, user journey leading to error (anonymized). Used for technical troubleshooting.</p>
+                        </li>
+                        <li><strong>Accessibility Feature Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub implements third-party accessibility tools (e.g., for screen readers, contrast adjustments, font size changes), these services may use cookies to remember your preferred accessibility settings. This ensures that users with disabilities have a consistent and tailored experience across the Site, making our content more inclusive and accessible. These cookies are vital for maintaining user-specific accessibility preferences, allowing individuals to customize their browsing environment to suit their needs. They enhance the usability of the site for a diverse audience, ensuring compliance with accessibility standards. For example, if you set a high contrast mode, a cookie remembers this preference.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Accessibility settings (e.g., contrast, font size, narration preferences). Used for user interface customization.</p>
+                        </li>
+                        <li><strong>Geo-location Cookies (Approximate):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some third-party services, particularly for advertising or content delivery, may use cookies to infer your approximate geographical location based on your IP address. This allows them to deliver geographically relevant content or advertisements (e.g., local restaurant ads) without collecting precise location data. This is often used for contextual relevance and to comply with regional advertising regulations. These cookies do not provide exact coordinates but rather a general region, ensuring that content or ads are suitable for your general area. For example, a cookie might help display recipes popular in your country.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Inferred country/region/city based on IP address. Used for localized content/ads.</p>
+                        </li>
+                        <li><strong>Device Fingerprinting (Advanced Tracking):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> While not strictly a "cookie," some advanced third-party tracking technologies may combine various pieces of non-personally identifiable information from your device (e.g., browser type, operating system, screen resolution, installed fonts) to create a unique "fingerprint" of your device. This fingerprint can then be used to track your activity across different websites, even if cookies are blocked or deleted. QuickFoodHub aims to minimize the use of such highly intrusive tracking methods, but it's important to be aware that third-party advertisers or analytics providers may employ these techniques. We encourage users to use privacy-enhancing browser extensions to mitigate such tracking. This method is more persistent than traditional cookies and raises higher privacy concerns due to its ability to identify users without explicit identifiers. We strive to partner with services that prioritize user privacy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Various device and browser attributes combined to create a unique identifier. Used for cross-site tracking and ad attribution.</p>
+                        </li>
+                        <li><strong>Cross-Device Tracking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some third-party advertising or analytics services use cookies (often in conjunction with other identifiers) to link your activity across multiple devices (e.g., your phone, tablet, and desktop computer). This allows them to create a more comprehensive profile of your interests and deliver consistent advertising experiences across all your devices. This is done by recognizing common login credentials or shared IP addresses. This advanced form of tracking aims to provide a unified view of your interactions with content and ads, regardless of the device you are using. It helps advertisers understand the full customer journey across different touchpoints. QuickFoodHub aims to limit such tracking where possible and focuses on anonymized, aggregated insights.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Linked user IDs across devices, browsing history from multiple devices. Primarily pseudonymized.</p>
+                        </li>
+                        <li><strong>Conversion Tracking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond general ad performance, conversion tracking cookies specifically measure when a user completes a desired action (a "conversion") after interacting with an advertisement or a specific piece of content. This could be signing up for a newsletter, creating an account, or making a purchase. These cookies are vital for advertisers to understand the return on investment of their campaigns and optimize their strategies to drive specific user actions. They provide precise data on the effectiveness of different marketing channels and content. For example, if you sign up for QuickFoodHub's newsletter after clicking an ad, a conversion cookie tracks this event.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Conversion event details (e.g., sign-up, purchase), ad interaction data, unique user ID. Used for marketing attribution.</p>
+                        </li>
+                        <li><strong>Retargeting Pixel Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> A specific type of targeting cookie, retargeting pixels are small pieces of code placed on our Site by advertising platforms. When you visit a page with a retargeting pixel, a cookie is dropped on your browser. This cookie then allows the advertising platform to show you specific ads for QuickFoodHub on other websites or social media platforms you visit. This is highly effective for re-engaging users who have shown interest in our content but haven't yet completed a desired action (e.g., signing up). They are designed to bring users back to our site. For example, if you view a specific recipe but don't save it, a retargeting pixel might show you an ad for that recipe later.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Page views, specific content interactions. Used to create retargeting audiences.</p>
+                        </li>
+                        <li><strong>Preference Cookies for Third-Party Embeds:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> When we embed content or features from third-party services (e.g., a survey widget, a commenting system, or an interactive map), these services may set cookies to remember your preferences related to their specific embed. For instance, a survey widget might use a cookie to remember that you've already completed a survey, preventing it from showing up again. These cookies ensure a consistent and personalized experience with embedded third-party content. They are specific to the functionality of the embedded element and enhance its usability. For example, a third-party commenting system might use a cookie to remember your username and email for future comments.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User preferences for specific embedded features, interaction status. Tied to the third-party service.</p>
+                        </li>
+                        <li><strong>Session Replay Cookies (Anonymized):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some advanced analytics tools use cookies to facilitate "session replay," which allows us to record and replay anonymized user sessions on our Site. This helps us visually understand how users navigate, interact with elements, and encounter issues. The data is heavily anonymized to protect privacy and is used solely for improving user experience and identifying usability bottlenecks. This provides a qualitative understanding of user behavior that goes beyond quantitative metrics. It helps us see the website through the eyes of our users, identifying areas of confusion or friction. We ensure that sensitive data is masked or excluded from these recordings.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Mouse movements, clicks, scrolls, form interactions (masked). Completely anonymized for privacy.</p>
+                        </li>
+                        <li><strong>Fraud Prevention and Bot Detection Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are deployed by specialized third-party services to identify and prevent fraudulent activities, such as ad click fraud, account takeovers, or bot traffic. They analyze various data points to detect unusual patterns or suspicious behavior, helping to maintain the integrity and security of our Site and advertising ecosystem. These cookies are essential for protecting QuickFoodHub and its users from malicious actors and ensuring fair and accurate reporting of website traffic and ad performance. They act as a crucial line of defense against cyber threats and automated attacks, safeguarding our resources. For example, they might flag rapid, non-human interactions.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Behavioral patterns, IP address, device fingerprints. Used for anomaly detection and security scoring.</p>
+                        </li>
+                        <li><strong>Application Performance Monitoring (APM) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Third-party APM services use cookies to monitor the performance of our website and its underlying applications. This includes tracking page load times, server response times, and overall system health. This data helps our technical team identify and resolve performance bottlenecks, ensuring that QuickFoodHub remains fast and responsive. These cookies are vital for maintaining a high-quality user experience by ensuring optimal website speed and reliability. They provide real-time insights into the technical health of our platform, allowing for proactive maintenance and issue resolution. For example, they might track how long it takes for a recipe image to load.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Page load times, network requests, error rates. Primarily technical and anonymized.</p>
+                        </li>
+                        <li><strong>User Feedback Widget Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub uses a third-party widget to collect direct user feedback (e.g., a "rate this page" button or a small survey pop-up), these services may use cookies to manage the display of the widget, remember if you've already submitted feedback, or store temporary responses. This ensures a non-intrusive feedback collection process and helps us gather valuable insights into user satisfaction and specific pain points. These cookies are designed to optimize the feedback experience, ensuring that prompts are timely and relevant, and that your input is captured effectively. They prevent repetitive requests and streamline the feedback submission process.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Widget display status, feedback submission status. Generally anonymous or linked to session.</p>
+                        </li>
+                        <li><strong>Web Font Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some websites use third-party services to deliver custom web fonts (like Google Fonts). While Google Fonts themselves do not set cookies, the service might log your IP address for a short period for technical reasons. Other font services, however, may use cookies to remember font preferences or for licensing purposes. These cookies ensure that the typography on QuickFoodHub is displayed consistently and beautifully across different devices and browsers, enhancing the visual appeal and readability of our content. They are crucial for maintaining the intended design aesthetic of the website. For example, ensuring the "Inter" font loads correctly.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> IP address (temporary, for some services), font loading status. Primarily technical.</p>
+                        </li>
+                        <li><strong>Marketing Automation Platform Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may use third-party marketing automation platforms to manage our email campaigns, user segmentation, and personalized content delivery. These platforms use cookies to track user interactions with our marketing communications and website content, allowing us to deliver more relevant and timely messages. This helps us nurture leads, engage with our audience, and provide a more tailored marketing experience. These cookies are essential for optimizing our marketing efforts and ensuring that our communications are personalized and effective. They help us understand user journeys across different marketing touchpoints. For example, if you download a recipe guide, a cookie might track this to send you related content.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Email opens, link clicks, website visits (linked to email subscriber ID). Used for marketing personalization.</p>
+                        </li>
+                        <li><strong>Single Sign-On (SSO) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub offers Single Sign-On (SSO) functionality through a third-party provider (e.g., logging in with your Google or Facebook account), these services will set cookies to manage your authentication session. This allows you to log in to QuickFoodHub using existing credentials from another service, simplifying the login process and enhancing user convenience. These cookies are crucial for securely verifying your identity through the SSO provider and maintaining your logged-in status across different applications. They streamline the user authentication process, making it faster and more secure. For example, a cookie might remember your Google login status.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Authentication tokens, session IDs. Linked to your SSO provider account.</p>
+                        </li>
+                        <li><strong>Affiliate Network Cookies (Broader):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond direct affiliate partnerships, QuickFoodHub might work with broader affiliate networks that manage relationships with numerous publishers and advertisers. These networks use cookies to track referrals across their entire network, ensuring accurate commission payouts and providing aggregated performance data. These cookies are a fundamental part of the affiliate marketing ecosystem, enabling a scalable and efficient way to promote products and services. They track user journeys from various sources to the final conversion point, providing detailed attribution. For example, if a user comes from an affiliate blog, the cookie tracks this to ensure the blog gets credit.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Referral IDs, click timestamps, conversion events. Pseudonymized for network-wide tracking.</p>
+                        </li>
+                        <li><strong>Customer Data Platform (CDP) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> In more advanced setups, QuickFoodHub might use a Customer Data Platform (CDP) to unify customer data from various sources (website, CRM, marketing platforms). CDPs use cookies to identify and track individual users across different touchpoints, building a comprehensive, single view of the customer. This allows for highly personalized experiences, targeted marketing, and improved customer service. These cookies are crucial for creating a holistic understanding of our users, enabling us to deliver highly relevant content and services. They help us to understand your preferences and interactions across all QuickFoodHub platforms. For example, a CDP cookie might link your website browsing with your newsletter subscription.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Consolidated user profile data, browsing history, interaction data from various sources. Linked to user ID.</p>
+                        </li>
+                        <li><strong>Demand-Side Platform (DSP) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> DSPs are used by advertisers to buy ad impressions across various ad exchanges in real-time. They use cookies to identify target audiences, optimize bidding strategies, and manage ad campaigns programmatically. These cookies track user behavior across a vast network of websites to ensure that ads are delivered to the most relevant users at the most opportune moments. They are a core component of programmatic advertising, enabling highly efficient and targeted ad delivery. These cookies help QuickFoodHub to monetize its content through relevant advertising, supporting the free access to our recipes and features. They track user segments and bid on ad impressions accordingly.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User segments, browsing history, ad interaction data. Primarily pseudonymized for ad targeting.</p>
+                        </li>
+                        <li><strong>Supply-Side Platform (SSP) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> SSPs are used by publishers (like QuickFoodHub) to sell their ad inventory to advertisers. They use cookies to manage ad placements, optimize ad revenue, and ensure that ads are displayed effectively on our Site. These cookies facilitate the real-time bidding process, allowing advertisers to bid on ad space on QuickFoodHub. They are essential for maximizing our ad revenue while maintaining a good user experience. These cookies help to ensure that the ads displayed on our site are relevant and do not negatively impact site performance. They manage the technical aspects of ad delivery and monetization. For example, an SSP cookie might track the number of ad impressions served on a page.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad impression data, ad viewability, revenue metrics. Primarily aggregated and anonymized.</p>
+                        </li>
+                        <li><strong>Data Management Platform (DMP) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> DMPs are used to collect, organize, and activate audience data from various sources (first-party, second-party, and third-party). They use cookies to build detailed user segments and profiles, which are then used for targeted advertising and content personalization across different platforms. These cookies enable a deeper understanding of user demographics, interests, and behaviors, allowing for highly refined audience targeting. They are a critical component of data-driven marketing and advertising strategies. These cookies help QuickFoodHub to understand its audience better and to deliver more relevant content and advertising through various channels. They consolidate data to create rich user profiles.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User attributes, browsing history, inferred interests, demographic data. Often pseudonymized and aggregated.</p>
+                        </li>
+                        <li><strong>Ad Server Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Ad servers are responsible for delivering advertisements to websites. They use cookies to manage ad campaigns, track ad impressions and clicks, and ensure that ads are delivered according to targeting parameters. These cookies are fundamental to the operation of digital advertising, ensuring that the right ads are shown to the right users at the right time. They help QuickFoodHub to display advertisements efficiently and to track their performance, which is essential for our revenue model. These cookies manage the technical delivery of ads and their associated tracking. For example, an ad server cookie might ensure that a specific ad campaign is only shown to users in a particular region.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad impressions, clicks, frequency capping data. Primarily anonymized for delivery and tracking.</p>
+                        </li>
+                        <li><strong>Marketing Attribution Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies help us understand which marketing channels or touchpoints contributed to a user's conversion (e.g., signing up for a newsletter, making a purchase). They track the user's journey across different interactions with our marketing efforts, providing insights into the effectiveness of various campaigns. This allows QuickFoodHub to optimize its marketing spend and focus on the most impactful channels. These cookies are crucial for measuring the return on investment of our marketing activities and making data-driven decisions about future campaigns. They provide a multi-touch attribution model for user engagement. For example, a cookie might track if a user first saw a social media ad, then clicked an email, and finally signed up.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User journey data, marketing touchpoints, conversion events. Used for marketing analytics.</p>
+                        </li>
+                        <li><strong>Consent Management Platform (CMP) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub uses a Consent Management Platform (CMP) to manage your cookie preferences and ensure compliance with privacy regulations like GDPR and CCPA. The CMP itself uses cookies to remember your consent choices (e.g., which cookie categories you have accepted or declined). This ensures that your preferences are respected on subsequent visits and that you are not repeatedly asked for consent. These cookies are essential for maintaining a transparent and compliant cookie consent process. They store your explicit choices regarding data collection and sharing, ensuring that our website operates within the bounds of your privacy preferences. For example, a CMP cookie remembers if you accepted all cookies or only essential ones.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User consent choices for cookie categories. Essential for legal compliance.</p>
+                        </li>
+                        <li><strong>Cross-Site Request Forgery (CSRF) Tokens in Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> For security purposes, some websites use cookies to store CSRF tokens. These tokens are used to prevent malicious attacks where unauthorized commands are transmitted from a user that the website trusts. While not directly for tracking, these cookies are vital for the security and integrity of your interactions with our Site, particularly for logged-in users. They ensure that requests coming from your browser are legitimate and originate from your active session. These cookies are a fundamental security measure, protecting against a common web vulnerability and safeguarding your account from unauthorized actions. They are typically session cookies and do not store personal data.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Randomly generated security tokens. Used for security validation.</p>
+                        </li>
+                        <li><strong>Web Application Firewall (WAF) Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may use a WAF to protect our website from various cyber threats, such as SQL injection, cross-site scripting, and other vulnerabilities. The WAF may set cookies to identify legitimate users, detect suspicious activity, and enforce security policies. These cookies are crucial for maintaining the overall security posture of our Site and ensuring a safe browsing environment for all users. They help to filter out malicious traffic and protect our web application from attacks. These cookies contribute to the robust defense mechanisms in place to safeguard QuickFoodHub's infrastructure and user data. For example, a WAF cookie might identify a user attempting to exploit a vulnerability.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Limited technical data related to network traffic and security, typically not personally identifiable. Used for threat detection.</p>
+                        </li>
+                        <li><strong>Heatmap and Session Replay Cookies (Detailed):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic session recording, advanced heatmap and session replay tools use cookies to capture highly detailed, anonymized data about user interactions, including mouse movements, clicks, scrolls, and form interactions. This data is then visualized as heatmaps (showing where users click most) or replays of individual sessions. This provides deep qualitative insights into user behavior and usability issues, allowing us to optimize our website's design and content for maximum engagement and ease of use. This level of detail helps us identify friction points, understand user intent, and continuously refine the user experience on QuickFoodHub. We ensure that all sensitive data is masked or excluded from these recordings to protect user privacy. This is a powerful tool for UX research.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed interaction data (mouse, clicks, scrolls), page views. Heavily anonymized and masked.</p>
+                        </li>
+                        <li><strong>Voice Search and AI Assistant Integration Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub integrates with voice search functionalities or AI-powered assistants (e.g., for recipe search or dietary recommendations), these third-party services may use cookies to remember your preferences, past queries, or to maintain session context. This ensures a seamless and personalized interaction with voice-activated features, making it even easier for you to find fast and flavorful recipes. These cookies are essential for the functionality and personalization of voice-enabled interfaces, allowing the AI to learn from your interactions and provide more accurate and relevant responses. They bridge the gap between voice input and website content. For example, a cookie might remember your previous voice search for "vegan quick meals."</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Voice query history (anonymized), interaction preferences, session context. Used for AI model improvement and personalization.</p>
+                        </li>
+                        <li><strong>Gamification and Loyalty Program Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub implements gamification elements (like points, badges, or leaderboards) or a loyalty program, third-party platforms managing these features may use cookies to track your progress, points earned, and participation in challenges. These cookies ensure that your achievements are correctly recorded and that you receive appropriate rewards, enhancing your engagement with the QuickFoodHub community. They are crucial for maintaining the integrity of gamified experiences and providing a fair and consistent reward system. These cookies track your interactions with gamified elements and link them to your user profile. For example, a cookie might track your progress in a "15-Min Dinner Challenge."</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Points earned, challenge participation, achievement unlocks. Linked to user account for progress tracking.</p>
+                        </li>
+                        <li><strong>User-Generated Content Moderation Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub utilizes third-party services for moderating user-generated content (e.g., comments, reviews, recipe submissions), these services may use cookies to track user behavior, identify potential spam or inappropriate content, and manage moderation queues. These cookies help maintain a safe and respectful environment on our Site by ensuring that user contributions adhere to our content standards. They are essential for efficient content moderation and ensuring the quality and safety of user-submitted material. These cookies help to identify suspicious patterns in user submissions. For example, a cookie might flag a user who repeatedly posts spam comments.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User submission history, flagged content, moderation status. Used for content integrity.</p>
+                        </li>
+                        <li><strong>Real-time Analytics Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some analytics services provide real-time data on website activity. These cookies track current user sessions to show us how many users are on the site, what pages they are viewing, and where they are coming from, all in real-time. This allows us to monitor site performance, identify sudden traffic spikes, or respond quickly to emerging trends. These cookies are crucial for operational monitoring and immediate decision-making regarding site content or performance. They provide immediate insights into user behavior as it happens. For example, seeing which new recipe is gaining immediate traction.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Current session data, active page views, referral source. Real-time, aggregated, and anonymized.</p>
+                        </li>
+                        <li><strong>Dynamic Content Delivery Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may use third-party services to deliver dynamic content, such as personalized banners, pop-ups, or special offers, based on your browsing behavior or specific triggers. These cookies track your interactions to ensure that the dynamic content displayed is relevant and timely, enhancing your engagement with our promotions and features. These cookies are essential for optimizing user engagement with personalized marketing messages and on-site experiences. They ensure that the content you see is tailored to your current interests and actions. For example, a cookie might trigger a pop-up offering a discount on a recipe guide if you've spent a long time browsing recipe categories.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Browsing behavior, interaction with dynamic content, user segment. Used for on-site personalization and marketing.</p>
+                        </li>
+                        <li><strong>Load Testing and Performance Benchmarking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> During periods of high traffic or when testing new features, QuickFoodHub may use third-party services for load testing and performance benchmarking. These services may set cookies to simulate user traffic and measure website responsiveness under stress. This helps us ensure that our Site can handle high demand and remains fast and reliable, even during peak usage. These cookies are vital for ensuring the scalability and robustness of our website, allowing us to proactively identify and address performance bottlenecks. They help us to deliver a consistent and high-quality user experience regardless of traffic volume.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Simulated user traffic data, response times, server load metrics. Primarily technical and anonymized.</p>
+                        </li>
+                        <li><strong>User Onboarding and Tutorial Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> When new users join QuickFoodHub, we might provide interactive onboarding tours or tutorials to help them navigate the Site and discover key features. Third-party services managing these onboarding flows may use cookies to track your progress through the tutorial, remember your completion status, or personalize subsequent onboarding steps. These cookies ensure a smooth and effective onboarding experience, helping new users quickly get accustomed to QuickFoodHub's functionalities. They are crucial for guiding new users through the initial stages of interaction and maximizing their engagement. For example, a cookie might remember which steps of a "how-to" guide you've completed.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Tutorial progress, completion status, user ID (if logged in). Used for onboarding personalization.</p>
+                        </li>
+                        <li><strong>Device Recognition Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond simple device information, some advanced third-party services use cookies (often in conjunction with other identifiers) to recognize and link different devices used by the same individual. This allows for a more holistic understanding of user behavior across smartphones, tablets, and desktops, enabling consistent content delivery and advertising. This technology aims to provide a unified view of the user journey, regardless of the device being used. It helps QuickFoodHub to understand how users interact with our content across their various devices, leading to a more seamless multi-device experience. This is a sophisticated form of tracking for cross-device personalization.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Linked device IDs, browsing history across devices. Primarily pseudonymized for cross-device targeting.</p>
+                        </li>
+                        <li><strong>Content Recommendation System Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may employ third-party content recommendation engines that use cookies to analyze your viewing habits and preferences to suggest other recipes, articles, or features you might enjoy. These systems learn from your interactions and the interactions of similar users to provide highly relevant and engaging content recommendations, enhancing content discovery and user engagement on our Site. These cookies are essential for driving content consumption and ensuring that you continuously find new and exciting culinary inspiration. They create a personalized content feed based on your inferred interests. For example, if you view many vegetarian recipes, the system might recommend more vegetarian content.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Content viewing history, interaction data, user preferences. Used for content personalization.</p>
+                        </li>
+                        <li><strong>User Segmentation Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Third-party services may use cookies to segment our user base into different groups based on demographics, interests, or behavior (e.g., "new users," "frequent visitors," "vegetarian recipe enthusiasts"). These segments are then used for targeted marketing, content personalization, or analytics. These cookies allow QuickFoodHub to understand its audience in a more granular way and tailor its strategies accordingly. They are crucial for delivering relevant experiences to different user groups. For example, a cookie might place you in a segment of "snack lovers" if you frequently visit the Snack Attack section.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User attributes, behavioral data, inferred interests. Used for audience segmentation and targeting.</p>
+                        </li>
+                        <li><strong>Fraudulent Activity Detection Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Specialized third-party services deploy cookies to monitor for and detect patterns indicative of fraudulent activity, such as unusual login attempts, automated bot traffic, or suspicious account behavior. These cookies are a critical layer of defense, protecting QuickFoodHub and its legitimate users from cyber threats, account compromises, and ad fraud. They analyze various data points to identify anomalies that suggest malicious intent. These cookies are essential for maintaining the security and integrity of our platform, ensuring a safe and trustworthy environment for all users. They help to safeguard against financial fraud and data breaches. For example, a cookie might flag multiple failed login attempts from different IP addresses.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Behavioral patterns, IP address, device fingerprints. Used for anomaly detection and security scoring.</p>
+                        </li>
+                        <li><strong>Ad Fraud Prevention Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are specifically designed to combat ad fraud, ensuring that advertisers' budgets are not wasted on non-human traffic or fraudulent impressions. They track various metrics to identify bots, click farms, and other forms of invalid traffic, helping to maintain a clean and efficient advertising ecosystem. These cookies are crucial for the financial health of QuickFoodHub, as they ensure that our advertising revenue is generated from genuine user interactions. They provide a layer of protection against sophisticated ad fraud schemes. For example, a cookie might detect unusual click patterns on advertisements.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad interaction patterns, traffic source, device characteristics. Used for fraud detection in advertising.</p>
+                        </li>
+                        <li><strong>User Engagement Tracking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic page views, these cookies track deeper levels of user engagement, such as how long users spend actively interacting with content, how far they scroll down a page, or whether they engage with interactive elements like quizzes or polls. This granular data helps QuickFoodHub understand the true value and stickiness of our content, allowing us to optimize for maximum user engagement. These cookies provide valuable insights into the effectiveness of our content and features in capturing and retaining user attention. They help us to create more compelling and interactive experiences. For example, a cookie might track how long a user watches a video recipe or interacts with a recipe generator.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Scroll depth, active time on page, interaction with specific elements. Aggregated for content optimization.</p>
+                        </li>
+                        <li><strong>Website Performance Optimization Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub utilizes third-party services that use cookies to optimize website performance. This includes caching content, pre-loading resources, and dynamically adjusting content delivery based on network conditions or user device capabilities. These cookies ensure that our Site loads quickly and runs smoothly, providing a seamless and efficient browsing experience for all users. They are essential for delivering a fast and responsive website, which is a core tenet of QuickFoodHub. These cookies manage technical aspects of content delivery to minimize load times and improve overall responsiveness. For example, a cookie might help a CDN deliver images from the closest server.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Network conditions, device capabilities, content loading times. Primarily technical and anonymized.</p>
+                        </li>
+                        <li><strong>User Journey Mapping Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Advanced analytics tools use cookies to map the entire user journey on QuickFoodHub, from their entry point to their exit, and every interaction in between. This helps us understand complex user flows, identify common paths, and pinpoint areas where users might drop off or encounter difficulties. This comprehensive view of the user journey is crucial for optimizing the overall user experience and improving conversion rates for key actions (e.g., signing up for an account, saving a recipe). These cookies provide a holistic understanding of how users navigate and interact with our site over time. For example, a cookie might track the sequence of pages a user visits before finding a specific recipe.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Sequence of page views, interaction events, time spent on each step. Aggregated for journey analysis.</p>
+                        </li>
+                        <li><strong>Cross-Channel Marketing Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub engages in cross-channel marketing (e.g., integrating website activity with email campaigns or push notifications), third-party services may use cookies to link your interactions across these different channels. This allows us to deliver a consistent and personalized marketing message across all touchpoints, optimizing the user experience and the effectiveness of our campaigns. These cookies are essential for creating a unified view of the customer across various marketing channels, enabling highly coordinated and relevant communications. They help us to understand how different marketing efforts influence user behavior. For example, a cookie might link your website browsing to your email engagement.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> User ID, interaction data from website, email, and other channels. Linked for cross-channel personalization.</p>
+                        </li>
+                        <li><strong>Attribution Modeling Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are used by marketing analytics platforms to help us understand which marketing touchpoints (e.g., a social media ad, a blog post, an email) receive credit for a user's conversion. They track the entire path a user takes before completing a desired action, allowing us to assign value to different marketing channels and optimize our spending. These cookies are crucial for sophisticated marketing analysis and ensuring that our advertising and content efforts are effectively measured. They provide insights into the complex customer journey and the influence of various marketing activities. For example, a cookie might assign partial credit to an initial blog post view and final credit to a direct website visit for a sign-up.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Sequence of marketing touchpoints, conversion events, user ID. Used for marketing attribution analysis.</p>
+                        </li>
+                        <li><strong>User Segmentation and Personalization Cookies (Advanced):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic demographic segmentation, advanced third-party cookies enable highly granular user segmentation based on complex behavioral patterns, inferred interests, and predicted future actions. This allows QuickFoodHub to deliver hyper-personalized content, features, and offers to very specific user groups. These cookies are essential for creating a truly individualized experience, ensuring that every interaction with QuickFoodHub is as relevant and engaging as possible. They help us to understand the unique needs and preferences of different user segments and tailor our platform accordingly. For example, a cookie might identify a user as a "beginner cook interested in healthy vegetarian meals" and personalize content accordingly.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed behavioral data, inferred interests, demographic attributes. Used for advanced personalization.</p>
+                        </li>
+                        <li><strong>Competitive Intelligence Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some third-party analytics or market research services use cookies to gather anonymized data about website traffic and user behavior across various sites, including competitors. This data is then aggregated to provide competitive intelligence reports, helping us understand market share, industry trends, and benchmark our performance against competitors. These cookies are used for strategic business insights and do not identify individual users. They provide a broad overview of the market landscape, helping QuickFoodHub to stay competitive and responsive to industry changes. This data is typically highly aggregated and anonymized to protect individual privacy.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Aggregated traffic data, user demographics (anonymized), site engagement metrics. Used for market analysis.</p>
+                        </li>
+                        <li><strong>User Experience (UX) Research Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may use third-party UX research tools that employ cookies to collect data on user interactions for usability testing and design improvements. This can include tracking clicks, scroll depth, form interactions, and navigation patterns in an anonymized way. This data helps us identify pain points in the user journey, understand how users interact with new features, and optimize the overall user experience. These cookies are crucial for continuous improvement of our website's usability and design, ensuring that QuickFoodHub is intuitive and easy to navigate. They provide insights into how users actually interact with the interface. For example, a cookie might track how long it takes a user to find a specific recipe category.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Interaction data (clicks, scrolls, form fills), navigation paths. Anonymized for UX research.</p>
+                        </li>
+                        <li><strong>Event Tracking Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond page views, event tracking cookies are used by analytics platforms to record specific "events" or actions users take on our Site, such as clicking a "Save Recipe" button, downloading a PDF, submitting a comment, or interacting with a video player. This granular data provides a deeper understanding of user engagement with specific features and content, allowing us to measure the success of interactive elements and optimize their design. These cookies are essential for understanding user behavior beyond simple browsing, providing insights into how users interact with key functionalities. They help us to measure the effectiveness of our interactive features. For example, a cookie might track how many times the "Quick Meal Generator" is used.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Specific user actions (events), timestamps, user ID (if logged in). Used for detailed behavior analysis.</p>
+                        </li>
+                        <li><strong>Site Search Analytics Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub provides an internal search function, third-party analytics services may use cookies to track user search queries, the results they click on, and whether their searches were successful. This data helps us understand what content users are looking for, identify gaps in our content, and improve the relevance of our search results. These cookies are crucial for optimizing the on-site search experience, ensuring that users can quickly and easily find the recipes and information they need. They provide insights into user intent and content demand. For example, a cookie might track if a user searches for "gluten-free snacks" and then views a specific recipe.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Search queries, search results clicked, search success/failure. Aggregated for search optimization.</p>
+                        </li>
+                        <li><strong>Recommendation Engine Personalization Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are employed by sophisticated third-party recommendation engines to analyze your individual browsing history, preferences, and interactions with content on QuickFoodHub. They build a detailed profile of your interests to deliver highly personalized recipe suggestions, articles, or related products. This aims to enhance your content discovery experience and keep you engaged with relevant material. These cookies are vital for creating a truly tailored user experience, ensuring that the content you see is always aligned with your culinary interests. They learn and adapt over time to provide increasingly accurate recommendations. For example, if you frequently view spicy street food recipes, the engine might recommend similar bold-flavored dishes.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed content viewing history, interaction data, inferred interests. Used for personalized recommendations.</p>
+                        </li>
+                        <li><strong>User Feedback and Survey Cookies (Advanced):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic feedback widgets, some advanced third-party survey platforms use cookies to manage complex survey flows, track user progress through multi-page surveys, and ensure that survey responses are correctly attributed to a session or user. They can also be used to segment users for targeted surveys based on their behavior or demographics. These cookies are crucial for conducting in-depth user research and gathering comprehensive feedback to inform product development and content strategy. They ensure data integrity and a smooth survey experience. For example, a cookie might remember your answers if you pause a long survey and return later.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Survey progress, responses, user ID (if logged in), behavioral segments. Used for detailed user research.</p>
+                        </li>
+                        <li><strong>Social Sharing Analytics Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are used by third-party social sharing tools to track how frequently QuickFoodHub content is shared on social media platforms and which content performs best. This helps us understand the virality of our recipes and articles and optimize our content for social engagement. They provide aggregated insights into the reach and impact of our content across various social networks. These cookies are essential for measuring the effectiveness of our social media strategy and identifying trending content. They help us to understand how our content resonates with social audiences. For example, a cookie might track how many times a specific recipe is shared on Pinterest.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Share counts, social platform referrals, content IDs. Aggregated for social media analytics.</p>
+                        </li>
+                        <li><strong>Ad Viewability Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Advertisers and ad tech platforms use cookies to measure "ad viewability" – whether an advertisement actually appeared on a user's screen and was potentially seen, rather than just loaded in the background. This helps ensure that advertisers only pay for truly viewable impressions, and it provides QuickFoodHub with data on the quality of our ad placements. These cookies are crucial for maintaining transparency and fairness in the digital advertising ecosystem. They help to optimize ad placements for maximum visibility and effectiveness. For example, a cookie might track if an ad was scrolled into view and for how long.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Ad position, scroll depth, time in view. Used for ad viewability measurement.</p>
+                        </li>
+                        <li><strong>Ad Blocking Detection Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some third-party services provide tools to detect if a user is employing an ad blocker. These services may use cookies to identify the presence of ad-blocking software, which helps publishers like QuickFoodHub understand the impact of ad blocking on their revenue and content delivery. This information can be used to tailor content or messages to users with ad blockers, or to provide aggregated data for industry analysis. These cookies are used for operational insights and do not track personal browsing habits beyond ad blocker detection. They help us to understand the landscape of ad blocking and its implications for our business model. For example, a cookie might simply mark a user as "ad blocker detected."</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Presence of ad-blocking software. Used for analytical purposes related to ad blocking.</p>
+                        </li>
+                        <li><strong>User Activity Logging Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are used by internal or third-party logging systems to record detailed user activity on the Site for debugging, security auditing, and compliance purposes. This includes actions taken, time spent on various features, and system interactions. While often anonymized, they can sometimes be linked to a user ID for troubleshooting specific issues. These cookies are essential for maintaining the operational integrity and security of QuickFoodHub, providing a comprehensive audit trail for system events and user interactions. They help us to identify and resolve issues, and to ensure compliance with our terms of service. For example, a cookie might log every click and form submission within a session for debugging purposes.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed interaction logs, timestamps, user ID (for troubleshooting). Used for internal monitoring.</p>
+                        </li>
+                        <li><strong>Performance Monitoring Cookies (Client-Side):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are used by third-party services to monitor the performance of our website from the client-side (i.e., from your browser). This includes measuring how quickly elements load, identifying JavaScript errors, and tracking overall responsiveness. This data helps us optimize the front-end performance of QuickFoodHub, ensuring a fast and smooth user experience. These cookies are crucial for identifying and resolving client-side performance issues that might impact user satisfaction. They provide insights into the real-world performance experienced by our users. For example, a cookie might track the time it takes for a recipe image gallery to fully load.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Client-side performance metrics (load times, errors). Primarily technical and anonymized.</p>
+                        </li>
+                        <li><strong>User Preference Management Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Beyond basic language or theme preferences, some third-party tools allow users to manage a wider array of personal preferences (e.g., notification settings, content filters, privacy choices within a specific widget). These cookies remember those granular preferences, ensuring a highly customized and persistent user experience across the Site. These cookies are essential for empowering users with control over their QuickFoodHub experience, allowing them to tailor the platform to their exact needs and desires. They ensure that complex user preferences are consistently applied. For example, a cookie might remember your preference to hide certain recipe categories.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Detailed user preferences for various site features. Linked to user ID for personalization.</p>
+                        </li>
+                        <li><strong>Cross-Domain Tracking Cookies (for QuickFoodHub Subdomains/Partners):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub operates across multiple subdomains (e.g., blog.quickfoodhub.com, shop.quickfoodhub.com) or closely integrated partner sites, cross-domain cookies may be used to track your journey seamlessly between these related properties. This allows us to provide a unified user experience and gather comprehensive analytics across our entire digital ecosystem. These cookies are crucial for understanding the holistic user journey across all QuickFoodHub-related properties, enabling consistent personalization and analytics. They ensure that your interactions are tracked as a single, continuous experience. For example, a cookie might track your visit from the main site to a recipe shop subdomain.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Browsing history across related domains, user ID (if applicable). Used for unified analytics.</p>
+                        </li>
+                        <li><strong>Affiliate Marketing Optimization Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> These cookies are used by affiliate marketing platforms to optimize the performance of affiliate campaigns. They collect data on which types of content or ads lead to the most successful conversions, allowing both QuickFoodHub and our affiliate partners to refine their strategies. This helps maximize revenue for both parties while ensuring that relevant offers are presented to users. These cookies are essential for the continuous improvement of our affiliate marketing efforts, ensuring that our partnerships are as effective as possible. They provide insights into the performance of different affiliate channels. For example, a cookie might track which specific recipe link leads to the most product purchases on an external site.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Affiliate link clicks, conversion events, content performance. Used for affiliate optimization.</p>
+                        </li>
+                        <li><strong>User Data Enrichment Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Some third-party services use cookies to enrich existing user data with additional demographic or interest information from external sources. This helps QuickFoodHub build a more complete profile of our audience (in an aggregated and anonymized manner) for better content targeting and marketing. This data is typically pseudonymized and used for strategic insights rather than individual identification. These cookies are crucial for enhancing our understanding of our user base, allowing us to tailor our content and services more effectively. They provide broader context to our first-party data. For example, a cookie might help categorize users into broader interest groups like "health-conscious" or "budget-minded."</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Inferred demographics, interests, behavioral attributes from external sources. Pseudonymized for enrichment.</p>
+                        </li>
+                        <li><strong>Interactive Content Cookies (e.g., Quizzes, Polls):</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> If QuickFoodHub features interactive content like quizzes, polls, or calculators provided by third-party platforms, these services may use cookies to remember your responses, track your progress, or prevent you from taking the same quiz multiple times. These cookies ensure a smooth and engaging interactive experience and help us gather valuable insights from user participation. They are essential for managing the state and functionality of interactive elements on our site. They ensure that your interactions with quizzes and polls are correctly recorded and attributed. For example, a cookie might remember your answers to a "What's Your Quick Food Style?" quiz.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Quiz/poll responses, completion status, user ID (if logged in). Used for interactive content analytics.</p>
+                        </li>
+                        <li><strong>Event Stream Processing Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> Advanced analytics and personalization systems use cookies to facilitate real-time "event stream processing," where every user interaction (click, scroll, page view) is treated as an event and processed instantly. This allows for immediate personalization and dynamic content adjustments. These cookies are crucial for powering highly responsive and adaptive website experiences, ensuring that QuickFoodHub can react to your behavior in real-time. They enable a continuous feedback loop between user action and site response. For example, a cookie might trigger an immediate recipe recommendation based on your last click.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Real-time stream of user interactions, timestamps. Used for dynamic personalization.</p>
+                        </li>
+                        <li><strong>User Feedback and Rating System Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> QuickFoodHub may implement third-party systems for users to leave reviews, ratings, or feedback on recipes or articles. These services use cookies to remember your submission status, prevent duplicate submissions, and link your feedback to your user account (if applicable). These cookies are essential for maintaining the integrity of our rating and review system and for gathering valuable user insights to improve our content. They ensure that feedback is accurately captured and displayed. For example, a cookie might remember that you have already rated a specific recipe.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Rating/review submission status, user ID (if logged in). Used for content quality and user feedback.</p>
+                        </li>
+                        <li><strong>Content Personalization A/B Testing Cookies:</strong>
+                            <p class="ml-6"><strong>Purpose:</strong> When QuickFoodHub tests different personalized content experiences (e.g., different recipe recommendations for different user segments), these cookies ensure that users consistently see the same personalized version throughout the test. This allows us to accurately measure the effectiveness of various personalization strategies and optimize for the most engaging user experience. These cookies are crucial for rigorous testing and data-driven optimization of our personalization efforts. They ensure the integrity of A/B tests for personalized content. For example, a cookie might ensure you always see "Version A" of a personalized recipe carousel.</p>
+                            <p class="ml-6"><strong>Data Collected:</strong> Test group assignment, content interaction data. Used for A/B testing personalization.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">5. How to Control and Manage Cookies</h2>
+                    <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by managing your settings within your web browser or by utilizing specific opt-out mechanisms. Please note that if you choose to refuse cookies, you may still use our website, but your access to some functionality and areas of our Site may be restricted or limited. For example, you might not be able to log in, save preferences, or experience personalized content. Disabling certain cookies can significantly impact your overall user experience and the functionality of many websites, not just QuickFoodHub. We provide detailed instructions below for managing cookies across various popular browsers and also highlight industry-wide opt-out tools. It's important to understand that managing cookies is an ongoing process, and you may need to adjust your settings periodically. Your choices regarding cookies are respected, and we aim to provide you with all the necessary information to make informed decisions about your online privacy. Remember that changes to cookie settings typically apply only to the browser and device you are currently using.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">5.1 Browser Settings</h3>
+                    <p>Most web browsers allow you to control cookies through their settings preferences. You can typically find these settings in the "Options" or "Preferences" menu of your browser. Below are links to instructions for managing cookies in popular web browsers:</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Google Chrome:</strong>
+                            <p class="ml-6"><strong>How to Manage:</strong> In Chrome, go to Settings &gt; Privacy and security &gt; Site Settings &gt; Cookies and site data. Here you can block all cookies, block third-party cookies, or clear cookies when you close Chrome. You can also add specific sites to allow or block cookies. Chrome provides granular control over cookie permissions, allowing you to tailor your preferences for individual websites. Regularly clearing your browsing data, including cookies, can help maintain privacy. This setting applies to all websites you visit using Chrome. Remember that blocking all cookies might severely limit website functionality.</p>
+                            <p class="ml-6"><strong>Detailed Steps:</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Open Chrome and click the three vertical dots (Menu) in the top-right corner.</li>
+                                    <li>Select "Settings."</li>
+                                    <li>In the left sidebar, click "Privacy and security."</li>
+                                    <li>Click "Site Settings."</li>
+                                    <li>Under "Content," click "Cookies and site data."</li>
+                                    <li>Here, you can:
+                                        <ul>
+                                            <li>"Allow all cookies" (default)</li>
+                                            <li>"Block third-party cookies in Incognito" (default for Incognito)</li>
+                                            <li>"Block third-party cookies" (blocks them in regular browsing too)</li>
+                                            <li>"Block all cookies (not recommended)"</li>
+                                            <li>"Clear cookies and site data when you close Chrome"</li>
+                                        </ul>
+                                    </li>
+                                    <li>You can also add specific sites to "Always allow cookies," "Always clear cookies when windows are closed," or "Block."</li>
+                                </ol>
+                            </p>
+                        </li>
+                        <li><strong>Mozilla Firefox:</strong>
+                            <p class="ml-6"><strong>How to Manage:</strong> In Firefox, navigate to Options &gt; Privacy & Security. Firefox offers Enhanced Tracking Protection, which can be set to Standard, Strict, or Custom. Custom allows you to specifically block cookies, trackers, cryptominers, and fingerprinters. You can also view and remove individual cookies. Firefox is known for its strong privacy features, and its cookie management options reflect this commitment. The Enhanced Tracking Protection provides a robust defense against various tracking technologies. You can also manage exceptions for specific websites if you encounter functionality issues. Regularly reviewing these settings is recommended to ensure they align with your privacy preferences.</p>
+                            <p class="ml-6"><strong>Detailed Steps:</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Open Firefox and click the three horizontal lines (Menu) in the top-right corner.</li>
+                                    <li>Select "Options" (or "Preferences" on Mac/Linux).</li>
+                                    <li>In the left sidebar, click "Privacy & Security."</li>
+                                    <li>Under "Enhanced Tracking Protection," you can choose:
+                                        <ul>
+                                            <li>"Standard" (default, blocks common trackers)</li>
+                                            <li>"Strict" (blocks more trackers, may break some sites)</li>
+                                            <li>"Custom" (allows you to choose what to block, including "Cookies" from "All third-party cookies" or "All cookies")</li>
+                                        </ul>
+                                    </li>
+                                    <li>Scroll down to "Cookies and Site Data" to manage specific site data or clear all.</li>
+                                    <li>Click "Manage Data..." to view and remove cookies for individual websites.</li>
+                                </ol>
+                            </p>
+                        </li>
+                        <li><strong>Apple Safari:</strong>
+                            <p class="ml-6"><strong>How to Manage:</strong> On macOS, go to Safari &gt; Preferences &gt; Privacy. On iOS, go to Settings &gt; Safari &gt; Privacy & Security. Safari offers options to prevent cross-site tracking and block all cookies. Apple prioritizes user privacy, and Safari's default settings are often more restrictive regarding tracking cookies. Preventing cross-site tracking helps limit how advertisers follow you across different websites. Blocking all cookies is a more drastic measure that can affect website functionality. Safari's intelligent tracking prevention (ITP) automatically limits cross-site tracking by reducing the ability of third-party cookies to track users. Regularly checking for updates to Safari's privacy features is advisable.</p>
+                            <p class="ml-6"><strong>Detailed Steps (macOS):</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Open Safari.</li>
+                                    <li>From the Safari menu, choose "Preferences."</li>
+                                    <li>Click "Privacy."</li>
+                                    <li>Here you can:
+                                        <ul>
+                                            <li>Check "Prevent cross-site tracking" (recommended)</li>
+                                            <li>Check "Block all cookies" (may cause issues with some websites)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Click "Manage Website Data..." to see which websites store cookies or data and remove them.</li>
+                                </ol>
+                            </p>
+                            <p class="ml-6"><strong>Detailed Steps (iOS/iPadOS):</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Go to "Settings" on your device.</li>
+                                    <li>Scroll down and tap "Safari."</li>
+                                    <li>Under "Privacy & Security," you can:
+                                        <ul>
+                                            <li>Toggle "Prevent Cross-Site Tracking" on/off.</li>
+                                            <li>Toggle "Block All Cookies" on/off.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Tap "Clear History and Website Data" to remove all cookies and browsing data.</li>
+                                </ol>
+                            </p>
+                        </li>
+                        <li><strong>Microsoft Edge:</strong>
+                            <p class="ml-6"><strong>How to Manage:</strong> In Edge, go to Settings &gt; Privacy, search, and services. Edge offers "Tracking prevention" with different levels (Basic, Balanced, Strict). You can also choose to block third-party cookies. Microsoft Edge provides a balance between user experience and privacy, allowing users to select a tracking prevention level that suits their needs. The "Balanced" setting is the default and aims to block harmful trackers without breaking website functionality. "Strict" offers more protection but might cause issues on some sites. Regularly clearing browsing data is also an option for cookie management. Edge's privacy features are continuously updated to provide better control over online tracking.</p>
+                            <p class="ml-6"><strong>Detailed Steps:</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Open Edge and click the three horizontal dots (Settings and more) in the top-right corner.</li>
+                                    <li>Select "Settings."</li>
+                                    <li>In the left sidebar, click "Privacy, search, and services."</li>
+                                    <li>Under "Tracking prevention," you can choose a level:
+                                        <ul>
+                                            <li>"Basic"</li>
+                                            <li>"Balanced" (default)</li>
+                                            <li>"Strict"</li>
+                                        </ul>
+                                    </li>
+                                    <li>You can also toggle "Block third-party cookies" on/off.</li>
+                                    <li>Under "Clear browsing data," click "Choose what to clear" to remove cookies.</li>
+                                </ol>
+                            </p>
+                        </li>
+                        <li><strong>Opera:</strong>
+                            <p class="ml-6"><strong>How to Manage:</strong> In Opera, go to Settings &gt; Privacy & security. Opera allows you to block third-party cookies, clear cookies on exit, and manage specific site settings. Opera also includes a built-in VPN and ad blocker, which can further enhance privacy. Its cookie management options are straightforward, giving users control over what data is stored by websites. You can easily view and delete individual cookies, providing granular control over your browsing data. Opera's commitment to privacy is reflected in its comprehensive set of tools for managing online tracking. Regularly checking these settings ensures they align with your privacy preferences and browsing habits.</p>
+                            <p class="ml-6"><strong>Detailed Steps:</strong>
+                                <ol class="list-decimal list-inside ml-6 space-y-1">
+                                    <li>Open Opera and click the "Easy Setup" icon (three horizontal lines) or "O" menu in the top-right/top-left corner.</li>
+                                    <li>Select "Go to full browser settings" at the bottom.</li>
+                                    <li>In the left sidebar, click "Privacy & security."</li>
+                                    <li>Under "Privacy and security," click "Site Settings."</li>
+                                    <li>Click "Cookies and site data."</li>
+                                    <li>Here you can:
+                                        <ul>
+                                            <li>"Allow all cookies" (default)</li>
+                                            <li>"Block third-party cookies"</li>
+                                            <li>"Block all cookies (not recommended)"</li>
+                                            <li>"Clear cookies and site data when you close Opera"</li>
+                                        </ul>
+                                    </li>
+                                    <li>You can also manage specific site permissions.</li>
+                                </ol>
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="mt-6">Please note that if you choose to block or delete cookies, some features and functionalities of the QuickFoodHub Site may not work as intended. This is because many website features rely on cookies to remember your preferences and maintain your session. The steps provided above are general guidelines and may vary slightly depending on your browser version. For the most accurate and up-to-date instructions, please refer to your browser's official help documentation.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">5.2 Industry Opt-Out Tools</h3>
+                    <p>In addition to browser settings, several industry organizations provide tools that allow you to opt out of targeted advertising from participating companies. These tools are designed to give consumers more control over the collection and use of their data for interest-based advertising across multiple websites. While these tools are effective for participating companies, they may not cover all advertisers or data collection methods. It's important to understand that opting out through these mechanisms does not mean you will no longer receive online advertising; it simply means that the ads you see may be less relevant to your interests. You may still receive generic or contextual advertisements. These opt-out tools often rely on cookies themselves to remember your opt-out preference, so if you clear your cookies, you may need to opt out again. We encourage you to explore these resources for a broader approach to managing your online advertising preferences.</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Digital Advertising Alliance (DAA):</strong> The DAA offers a consumer choice tool that allows you to opt out of interest-based advertising from participating companies. This tool is widely recognized in North America and provides a centralized way to manage your preferences across various ad tech providers. It provides transparency into which companies are collecting data for advertising purposes and gives you the power to opt out of that collection. The DAA's tool is a valuable resource for exercising your choices regarding personalized ads.</li>
+                        <li><strong>European Interactive Digital Advertising Alliance (EDAA):</strong> For users in Europe, the EDAA provides a similar opt-out tool for companies adhering to the European self-regulatory program for online behavioral advertising. This platform allows you to review and manage your preferences for interest-based advertising from a wide range of companies operating within the European Economic Area. It's a crucial tool for compliance with European data protection standards and for empowering users with control over their ad experience.</li>
+                        <li><strong>Network Advertising Initiative (NAI):</strong> The NAI offers an opt-out tool for its member companies, which are primarily online advertising networks. This tool allows you to opt out of interest-based advertising from NAI members, providing another layer of control over the data used for targeted ads. The NAI is committed to responsible data collection and use, and its opt-out tool is a key component of its self-regulatory efforts.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">5.3 Website Cookie Consent Tool</h3>
+                    <p>QuickFoodHub utilizes a cookie consent management solution (as seen at the bottom of this page) to provide you with granular control over the non-essential cookies placed on your device. When you first visit our Site, or if your previous consent has expired, you will see a banner or pop-up requesting your consent for cookie usage. This tool allows you to accept all cookies, decline all non-essential cookies, or customize your preferences by selecting specific categories of cookies you wish to allow. Your choices are then stored in a cookie (a strictly necessary one) so that we remember your preference for future visits. This mechanism is designed to comply with data protection regulations that require explicit consent for certain types of cookies. We strive to make this process as clear and user-friendly as possible, empowering you to make informed decisions about your privacy while interacting with QuickFoodHub. This tool provides a direct and immediate way to manage your cookie preferences specifically for our Site, complementing the broader controls offered by your browser or industry opt-out tools. Your consent is a dynamic process, and you can change your preferences at any time by clicking the "Manage Cookie Preferences" link (or similar) that may appear on our Site, or by clearing your browser cookies which will trigger the consent banner again.</p>
+                    <p>The cookie consent tool categorizes cookies to help you understand their purpose:</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>Strictly Necessary Cookies:</strong> These are always active as they are essential for the website's basic functionality. You cannot opt out of these.</li>
+                        <li><strong>Performance/Analytics Cookies:</strong> You can choose to enable or disable these. Disabling them means we won't collect data on your site usage for analytics, but the site will still function.</li>
+                        <li><strong>Functionality Cookies:</strong> You can choose to enable or disable these. Disabling them might mean some personalized features (like remembering your language) won't work.</li>
+                        <li><strong>Targeting/Advertising Cookies:</strong> You can choose to enable or disable these. Disabling them means you won't receive personalized ads based on your browsing, but you may still see generic ads.</li>
+                        <li><strong>Social Media Cookies:</strong> You can choose to enable or disable these. Disabling them might limit your ability to share content directly from our site to social platforms.</li>
+                    </ul>
+                    <p class="mt-6">Your consent choice is stored locally on your device via a cookie. If you clear your browser's cookies, you will be prompted again for your consent when you next visit QuickFoodHub. We are committed to honoring your choices and providing a transparent and compliant cookie management experience.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">6. Your Consent</h2>
+                    <p>By using QuickFoodHub and interacting with our Site, you consent to the placement of cookies on your device in accordance with this Cookies Policy. Where required by applicable law, we obtain your explicit consent before placing non-essential cookies on your device. This consent is typically gathered through the cookie banner or pop-up that appears when you first visit our Site. By clicking "Accept All," "Agree," or a similar button, or by continuing to browse our Site after seeing the banner, you are providing your consent for us to use all types of cookies described in this policy. If you choose to customize your preferences through our cookie consent tool, your specific selections will constitute your consent for those chosen categories. We are committed to making our consent process clear and user-friendly, ensuring that you have a genuine choice regarding your data. Your consent is a dynamic process, and you have the right to withdraw your consent at any time. The process for withdrawing consent is typically the same as managing your cookie preferences, either through your browser settings or our on-site cookie consent tool. Withdrawing consent for certain cookie categories may affect the functionality or personalization of your experience on QuickFoodHub, as explained in Section 5. We respect your decision and will cease the collection of data via those specific cookies once consent is withdrawn, unless there is a legal obligation or legitimate interest that overrides your request, as outlined in our Privacy Policy. Our goal is to ensure that your consent is freely given, specific, informed, and unambiguous, in full compliance with relevant data protection regulations.</p>
+                    <p>The concept of consent in the digital age is paramount, especially concerning data collection through cookies. QuickFoodHub adheres to the principle that your control over your personal data is fundamental. When we request your consent for cookie usage, we do so with the intention of providing you with a transparent choice. We present information about the types of cookies and their purposes in an easily understandable format, allowing you to make an informed decision. This is particularly relevant for non-essential cookies, such as those used for analytics, advertising, or personalization, which go beyond the basic functioning of the website. Your affirmative action, whether through clicking an "Accept" button or actively selecting preferences in our consent manager, signifies your agreement to our cookie practices for those specific categories. We also ensure that our consent mechanism is designed to be easily revocable. This means that if you change your mind at any point, you can revisit your cookie settings and adjust your preferences. The withdrawal of consent will apply from that point forward and will not affect any data processing that occurred based on your prior consent. We continuously review and update our consent mechanisms to ensure they remain compliant with evolving privacy laws and best practices, providing you with a consistent and trustworthy experience. Your trust is built on transparency and control, and our approach to cookie consent reflects this core value. We aim to strike a balance between providing a rich, personalized website experience and respecting your privacy choices, ensuring that you are always in the driver's seat when it comes to your data on QuickFoodHub.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">7. Data Protection Regulations and Cookies</h2>
+                    <p>QuickFoodHub is committed to complying with applicable data protection laws and regulations concerning the use of cookies and other tracking technologies. These regulations are designed to protect your privacy rights and give you greater control over your personal data. Understanding the key principles of these regulations helps clarify our approach to cookie management and your rights as a user. We continuously monitor changes in global privacy laws to ensure our practices remain compliant and uphold the highest standards of data protection. Our commitment extends beyond mere compliance; we strive to embed privacy-by-design principles into our operations, ensuring that data protection is considered at every stage of our website's development and maintenance. This proactive approach ensures that your privacy is safeguarded effectively and consistently, regardless of your geographical location. We believe that robust data protection practices are fundamental to building and maintaining user trust in the digital age, especially for platforms that rely on user interaction and data for service delivery. Our dedication to these principles is unwavering, reflecting our commitment to ethical data stewardship.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">7.1 General Data Protection Regulation (GDPR) - EU/EEA</h3>
+                    <p>The GDPR is a comprehensive data protection law in the European Union (EU) and European Economic Area (EEA) that significantly impacts how personal data is collected, processed, and stored. Under GDPR, cookies that can identify an individual (even indirectly, like through an IP address or unique identifier) are considered "personal data." The GDPR requires websites to obtain explicit, informed consent from users before placing most types of cookies (excluding strictly necessary cookies). This means that users must be clearly informed about the types of cookies used, their purposes, and who places them, and then actively provide their consent. QuickFoodHub's cookie consent banner and this detailed policy are designed to meet GDPR's stringent consent requirements, ensuring that your choices are respected. The GDPR also grants individuals several rights regarding their data, including the right to access, rectify, erase ("right to be forgotten"), restrict processing, object to processing, and data portability. Our cookie management practices and Privacy Policy are aligned with these rights, providing mechanisms for you to exercise them. We continuously review our data processing activities to ensure ongoing compliance with GDPR, demonstrating our commitment to protecting the privacy of our EU/EEA users. This involves careful consideration of data minimization, purpose limitation, and transparency in all our cookie-related operations. Our adherence to GDPR principles underscores our dedication to responsible data handling and user empowerment. We regularly conduct data protection impact assessments to identify and mitigate any potential risks associated with our cookie usage, ensuring that we maintain the highest standards of privacy for our European audience. The GDPR's emphasis on accountability means we maintain records of consent and demonstrate compliance through our documented policies and procedures. Our commitment to GDPR extends to ensuring that any third-party services we use also comply with these regulations, creating a robust privacy ecosystem for our users.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">7.2 California Consumer Privacy Act (CCPA) - California, USA</h3>
+                    <p>The CCPA is a landmark privacy law in California, USA, that grants California consumers significant rights regarding their personal information. While the CCPA's definition of "personal information" is broad and includes identifiers linked to cookies, its approach to consent differs from GDPR. The CCPA focuses on providing consumers with the "right to opt-out" of the "sale" of their personal information. While QuickFoodHub does not "sell" your personal information in the traditional sense, the sharing of data with third-party advertising partners for cross-context behavioral advertising may, under certain interpretations, be considered a "sale" under CCPA. Therefore, we provide California residents with the right to opt out of such sharing. Our cookie management tool and Privacy Policy reflect our commitment to CCPA compliance, allowing California users to exercise their rights. The CCPA also grants rights such as the right to know what personal information is collected, the right to request deletion of personal information, and the right to non-discrimination for exercising privacy rights. We are dedicated to upholding these rights for our California users, providing clear mechanisms for them to manage their data preferences. Our CCPA compliance efforts involve mapping data flows, ensuring proper notice at collection, and developing processes to respond to consumer requests efficiently. We continuously update our practices to align with any new guidance or amendments to the CCPA, ensuring robust privacy protections for our California audience. The CCPA's focus on transparency means we clearly disclose our data collection and sharing practices, empowering consumers to make informed choices. Our commitment to CCPA extends to ensuring that any third-party services we use also comply with these regulations, creating a robust privacy ecosystem for our users.</p>
+
+                    <h3 class="text-2xl font-semibold text-dark-text mt-6 mb-3">7.3 Other Regional Privacy Laws</h3>
+                    <p>Beyond GDPR and CCPA, various other regions and countries have implemented their own data protection and privacy laws that may impact cookie usage. QuickFoodHub strives to monitor and adapt its practices to comply with relevant regional regulations as our user base expands globally. Examples include:</p>
+                    <ul class="list-disc list-inside ml-6 space-y-2">
+                        <li><strong>LGPD (Lei Geral de Proteção de Dados) - Brazil:</strong> Brazil's LGPD is similar to GDPR in its comprehensive nature and emphasis on consent for data processing, including cookie usage. QuickFoodHub aims to align its consent mechanisms and data handling practices with LGPD requirements for users in Brazil, ensuring their privacy rights are respected.</li>
+                        <li><strong>PIPEDA (Personal Information Protection and Electronic Documents Act) - Canada:</strong> Canada's PIPEDA governs the collection, use, and disclosure of personal information in the course of commercial activities. While it has a different consent model than GDPR, it still requires transparency and appropriate consent for cookie usage. QuickFoodHub strives to provide clear information and consent options for Canadian users.</li>
+                        <li><strong>APPI (Act on the Protection of Personal Information) - Japan:</strong> Japan's APPI has undergone revisions to strengthen data protection, including rules around cross-border data transfers and the handling of "personal-related information" which can include cookie data. QuickFoodHub monitors APPI developments to ensure compliance for its Japanese users.</li>
+                        <li><strong>Australian Privacy Act (APA) - Australia:</strong> The APA, while not as prescriptive on cookies as GDPR, requires organizations to take reasonable steps to protect personal information and be transparent about their data handling practices. QuickFoodHub's commitment to transparency in its cookie policy aligns with the principles of the APA.</li>
+                        <li><strong>POPIA (Protection of Personal Information Act) - South Africa:</strong> South Africa's POPIA is a comprehensive privacy law that requires consent for processing personal information and provides data subject rights similar to GDPR. QuickFoodHub aims to ensure its cookie practices are compliant with POPIA for users in South Africa.</li>
+                        <li><strong>Data Protection Act - UK:</strong> While the UK has left the EU, it has enacted its own Data Protection Act that largely mirrors GDPR, often referred to as "UK GDPR." QuickFoodHub continues to adhere to the principles and requirements of UK data protection laws for its users in the United Kingdom.</li>
+                        <li><strong>Personal Data Protection Act (PDPA) - Singapore:</strong> Singapore's PDPA governs the collection, use, and disclosure of personal data by organizations. It includes provisions for consent and data protection, which QuickFoodHub considers in its cookie practices for users in Singapore.</li>
+                        <li><strong>Federal Data Protection Act (FADP) - Switzerland:</strong> Switzerland's FADP is a robust privacy law that has been updated to align more closely with GDPR. QuickFoodHub ensures its cookie and data handling practices meet the standards set by the FADP for users in Switzerland.</li>
+                        <li><strong>Other Emerging Regulations:</strong> The landscape of data privacy is constantly evolving, with new regulations emerging in various states within the USA (e.g., Virginia's CDPA, Colorado's CPA, Utah's UCPA, Connecticut's CTDPA) and other countries globally. QuickFoodHub is committed to staying abreast of these developments and adapting its cookie and privacy practices to ensure compliance with relevant laws that impact our operations and user base. Our proactive approach ensures that we remain at the forefront of data protection.</li>
+                    </ul>
+                    <p class="mt-6">Our commitment to global privacy means we strive to implement robust data protection measures that meet or exceed the requirements of various international and regional laws, providing a consistent and high level of privacy for all QuickFoodHub users. We continuously review our practices and seek legal counsel to ensure our compliance with the complex and evolving global privacy landscape.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">8. Changes to This Cookies Policy</h2>
+                    <p>QuickFoodHub has the discretion to update this Cookies Policy at any time. When we do, we will revise the "last updated" date at the top of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are using cookies and how we are helping to protect your personal information. You acknowledge and agree that it is your responsibility to review this Cookies Policy periodically and become aware of modifications. Significant changes will be communicated through a prominent notice on our Site or via email to registered users, giving you an opportunity to review the changes before they become effective. We believe in continuous improvement and transparency, and updating our policies is part of that commitment. Your continued use of the Site following the posting of revised Cookies Policy means that you accept and agree to the changes. We strive to make any changes as clear and understandable as possible, ensuring that you are always informed about our data practices. Our commitment to transparency means that any updates will be clearly communicated and easily accessible, allowing you to stay informed about how your data is handled on QuickFoodHub. We encourage you to regularly review this policy to ensure your ongoing understanding and agreement with our cookie practices.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2 class="text-3xl font-bold text-dark-text mb-4">9. Contact Us</h2>
+                    <p>If you have any questions about this Cookies Policy, our data practices, or your dealings with this Site, please do not hesitate to contact us. We are committed to addressing your concerns promptly and transparently. Your feedback is invaluable in helping us maintain the highest standards of privacy and data protection. For general inquiries, feedback, or specific questions related to recipes or features, please visit our dedicated <a href="contact.html" class="text-primary-red hover:underline">Contact Us</a> page for various ways to get in touch. For privacy-specific concerns, you can reach our Data Protection Officer directly at the email address provided below. We strive to respond to all inquiries within a reasonable timeframe, ensuring that your questions are answered comprehensively and your concerns are addressed with the utmost care. Your trust in QuickFoodHub is paramount, and we are here to provide clarity and support regarding all aspects of our cookie and data privacy policies.</p>
+                    <p class="mt-4"><strong>QuickFoodHub</strong></p>
+                    <p>123 Flavorful Lane, Culinary District</p>
+                    <p>New Delhi, Delhi 110001, India</p>
+                    <p>Email: <a href="mailto:info@quickfoodhub.com" class="text-primary-red hover:underline">info@quickfoodhub.com</a></p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p class="mt-4">We are committed to addressing your concerns promptly and transparently. Please allow a reasonable time for us to respond to your inquiries. Your feedback is valuable in helping us maintain the highest standards of privacy and data protection.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Dialogue Box -->
+    <div id="cookieConsent" class="hidden">
+        <p>This website uses cookies to ensure you get the best experience on our website. By clicking "Accept All", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. For more details, please read our <a href="cookies.html" class="text-secondary-mustard hover:underline">Cookies Policy</a>.</p>
+        <div class="flex space-x-4">
+            <button id="acceptCookies" class="btn-primary">Accept All</button>
+            <button id="declineCookies" class="btn-decline">Decline Non-Essential</button>
+            <!-- You could add a "Customize" button here to open a more detailed modal -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text text-clean-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About QuickFoodHub -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">QuickFoodHub</h3>
+                <p class="text-sm leading-relaxed">Your shortcut to delicious meals and quick bites for every busy moment. Fast. Flavorful. Ready When You Are.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-secondary-mustard transition-colors duration-300">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-secondary-mustard transition-colors duration-300">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-secondary-mustard transition-colors duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-secondary-mustard transition-colors duration-300">Terms of Service</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary-mustard transition-colors duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Connect -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Get in Touch</h3>
+                <address class="not-italic space-y-2 text-sm mb-4">
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Flavorful Lane, Culinary District</p>
+                    <p>New Delhi, Delhi 110001, India</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@quickfoodhub.com</p>
+                    <p><i class="fas fa-phone-alt mr-2"></i>+91 98765 43210</p>
+                </address>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Connect With Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-8 pt-4 border-t border-gray-700">
+            <p class="text-sm">&copy; 2025 QuickFoodHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic Cookie Consent Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookiesBtn = document.getElementById('acceptCookies');
+            const declineCookiesBtn = document.getElementById('declineCookies');
+            const cookieName = 'quickfoodhub_cookie_consent';
+
+            // Check if user has already made a choice
+            if (!localStorage.getItem(cookieName)) {
+                cookieConsent.classList.remove('hidden');
+            }
+
+            acceptCookiesBtn.addEventListener('click', function() {
+                localStorage.setItem(cookieName, 'accepted');
+                cookieConsent.classList.add('hidden');
+                // You would typically set specific cookies here based on acceptance
+                console.log('Cookies accepted.');
+            });
+
+            declineCookiesBtn.addEventListener('click', function() {
+                localStorage.setItem(cookieName, 'declined');
+                cookieConsent.classList.add('hidden');
+                // You would typically disable non-essential cookies here
+                console.log('Non-essential cookies declined.');
+            });
+        });
+
+        // Function to clear consent (for testing/development)
+        function clearCookieConsent() {
+            localStorage.removeItem('quickfoodhub_cookie_consent');
+            location.reload();
+        }
+        // You could add a button to call clearCookieConsent() for testing purposes on the page.
+    </script>
+
+</body>
+</html>

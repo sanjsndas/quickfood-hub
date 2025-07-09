@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFoodHub — Fast. Flavorful. Ready When You Are.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA; /* Clean White */
+            color: #212121; /* Midnight Black */
+        }
+        .text-primary-red { color: #E53935; }
+        .bg-primary-red { background-color: #E53935; }
+        .text-secondary-mustard { color: #FFEB3B; }
+        .bg-secondary-mustard { background-color: #FFEB3B; }
+        .text-dark-text { color: #212121; }
+        .bg-clean-white { background-color: #FAFAFA; }
+        .text-mint-green { color: #4CAF50; }
+        .bg-mint-green { background-color: #4CAF50; }
+
+        /* Custom styles for better aesthetics and responsiveness */
+        .container {
+            max-width: 1200px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E53935; /* Bold Tomato Red on hover */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #D32F2F; /* Darker red on hover */
+            transform: translateY(-2px);
+        }
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .recipe-image {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            border-radius: 0.5rem; /* Rounded corners for images */
+        }
+        /* Ensure responsive image sizing within cards */
+        .recipe-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive adjustments for text and layout */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .grid-cols-1-md {
+                grid-template-columns: 1fr;
+            }
+            .grid-cols-2-lg {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-cols-3-xl {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-clean-white text-dark-text">
+
+    <!-- Header and Navigation -->
+    <header class="bg-clean-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-red mb-4 md:mb-0">QuickFoodHub</a>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 space-x-3 text-lg font-semibold">
+                    <li><a href="index.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Home</a></li>
+                    <li><a href="blog.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Blog</a></li>
+                    <li><a href="privacy.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Privacy</a></li>
+                    <li><a href="terms.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Terms</a></li>
+                    <li><a href="cookies.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Cookies</a></li>
+                    <li><a href="contact.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-96 md:h-screen flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
+        <div class="container mx-auto px-4 text-center z-10 hero-content">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">Fast. Flavorful. Ready When You Are.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">Your shortcut to delicious meals and quick bites for every busy moment.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 hero-buttons">
+                <a href="#recipes" class="btn-primary bg-primary-red text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300">Quick Recipes</a>
+                <a href="#snacks" class="btn-primary bg-secondary-mustard text-dark-text px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-300">Snack Hacks</a>
+                <a href="#meals" class="btn-primary bg-mint-green text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300">15-Min Meals</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About QuickFoodHub Introduction -->
+    <section class="py-16 bg-clean-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-dark-text mb-12">Welcome to QuickFoodHub: Your Culinary Companion for a Fast-Paced Life</h2>
+            <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">
+                <p>QuickFoodHub is your go-to platform for recipes and food inspiration when time is short but cravings are real. We're designed for busy professionals, students, and families seeking fast, flavorful meals without complex prep. Our mission is to transform quick cooking, proving convenience doesn't sacrifice taste.</p>
+                <p>Explore a vibrant spectrum of culinary delights, from global street food and fusion snacks to express meals and ingenious microwave hacks. Our 5-minute fixes and 30-minute dinners are your ultimate salvation for hearty satisfaction with minimal effort.</p>
+                <p>What sets us apart is our focus on simplicity and accessibility. Our recipes use readily available ingredients and straightforward instructions for all skill levels. The bold, colorful, and mobile-friendly design makes browsing a joy, with photo-driven imagery bringing each recipe to life. Join QuickFoodHub and discover a world where speed meets flavor, making delicious moments effortless, even on your busiest days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16 bg-gray-100" id="features">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-dark-text mb-12">Unlocking Culinary Convenience: QuickFoodHub's Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Quick Recipes Library -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="2xl font-bold text-primary-red mb-4">Quick Recipes Library</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Dive into an expansive collection of recipes categorized for speed and ease. Your ultimate resource for delicious meals in record time.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>5-Min Snacks:</strong> Quick energy boosts or sudden hunger pangs.</li>
+                        <li><strong>15-Minute Dinners:</strong> Weeknight solutions for efficiency and taste.</li>
+                        <li><strong>One-Pot Wonders:</strong> Simplify cooking and cleanup.</li>
+                        <li><strong>Express Breakfast Ideas:</strong> Nutritious options for a fast start.</li>
+                        <li><strong>Microwavable Meal Hacks:</strong> Unlock your microwave's full potential.</li>
+                    </ul>
+                </div>
+
+                <!-- Street Food Spotlight -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="2xl font-bold text-primary-red mb-4">Street Food Spotlight</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Embark on a global culinary adventure from your kitchen. Celebrate the vibrant, bold flavors of street food culture.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Famous Global Street Eats:</strong> Discover origins and stories.</li>
+                        <li><strong>DIY Versions at Home:</strong> Simplified, authentic recipes.</li>
+                        <li><strong>Bold, Spicy, Fusion Recipes:</strong> Big, unapologetic flavors.</li>
+                    </ul>
+                </div>
+
+                <!-- Snack Attack Section -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="2xl font-bold text-primary-red mb-4">Snack Attack Section</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Conquer cravings with speed and satisfaction. Delicious, energizing, and easy-to-prepare snacks.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Sweet & Savory Quick Fixes:</strong> Cater to every mood.</li>
+                        <li><strong>High-Protein Bites:</strong> Fuel your body and curb hunger.</li>
+                        <li><strong>After-Work or School Snacks:</strong> Comforting and easy recharges.</li>
+                    </ul>
+                </div>
+
+                <!-- Quick & Healthy Options -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="2xl font-bold text-primary-red mb-4">Quick & Healthy Options</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Nutritious meals prepared swiftly. Balanced recipes that boost energy and well-being.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Light, Nutritious Meals in Under 20 Minutes:</strong> Wholesome and fast main dishes.</li>
+                        <li><strong>Energy Boosters and Smoothies:</strong> Daily vitamins and minerals on the go.</li>
+                        <li><strong>Balanced Meals with Minimal Prep:</strong> Efficiently combine nutrients.</li>
+                    </ul>
+                </div>
+
+                <!-- Speed Challenges -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="2xl font-bold text-primary-red mb-4">Speed Challenges</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Prove your culinary speed! Fun, competitive timed cooking challenges.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>“15-Min Dinner” Recipe Challenges:</strong> Our signature timed challenge.</li>
+                        <li><strong>User Submissions and Leaderboard:</strong> Share your triumphs and track progress.</li>
+                        <li><strong>Fun Rewards for Fastest Meals:</strong> Earn recognition and prizes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section class="py-16 bg-clean-white" id="recipes">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-dark-text mb-12">Our Quick & Flavorful Recipes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Recipe 1: Zesty Lemon Herb Chicken with Quinoa -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p1.avif" alt="Zesty Lemon Herb Chicken with Quinoa" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Zesty Lemon Herb Chicken with Quinoa (20 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">A vibrant, nutritious weeknight dish ready in under 20 minutes. Pan-seared chicken with bright lemon and aromatic herbs, served over wholesome quinoa. Perfect for a light yet satisfying meal, easily adaptable with various herbs or a touch of chili. This dish proves fast food can be gourmet and healthy.</p>
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Use pre-cooked quinoa for speed. Add spinach for extra greens. Adapt with bell peppers or zucchini. Thinly slice chicken for rapid cooking.</p>
+                </div>
+
+                <!-- Recipe 2: Spicy Peanut Noodles with Edamame (15 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p2.avif" alt="Spicy Peanut Noodles with Edamame" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Spicy Peanut Noodles with Edamame (15 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Your answer to quick takeout cravings! Slippery noodles with a rich, creamy, spicy peanut sauce, loaded with crunchy carrots and edamame. A vegetarian delight ready in a flash for lunch or dinner. Adjust spice to your liking. Adaptable with chicken, tofu, or shrimp. A perfect balance of savory, sweet, tangy, and spicy.</p>
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Lightly toast peanut butter for richer flavor. Great with added protein like tofu or grilled chicken. Pre-shredded coleslaw mix can replace fresh carrots.</p>
+                </div>
+
+                <!-- Recipe 3: Speedy Black Bean Tacos (10 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p3.avif" alt="Speedy Black Bean Tacos" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Speedy Black Bean Tacos (10 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Your culinary hero for Taco Tuesday! Transform pantry staples into vibrant, flavorful tacos in just 10 minutes. A fantastic vegetarian option, packed with protein and taste. Customizable with fresh toppings for crunch, creaminess, and freshness. Budget-friendly and incredibly versatile.</p>
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Use pre-made guacamole for speed. Add lime juice for brightness. For a non-vegetarian version, brown ground meat with spices.</p>
+                </div>
+
+                <!-- Recipe 4: Microwave Mug Mac & Cheese (5 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p4.avif" alt="Microwave Mug Mac & Cheese" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Microwave Mug Mac & Cheese (5 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Your ultimate savior for mac and cheese cravings! A single serving of gooey, cheesy goodness in just 5 minutes. Perfect for a quick lunch, snack, or comfort food pick-me-up. Customizable with garlic powder, onion powder, or hot sauce. Instant gratification with minimal effort.</p>
+                   
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Use half-and-half for a richer sauce. Experiment with different cheeses. Add cooked bacon or ham for protein.</p>
+                </div>
+
+                <!-- Recipe 5: Quick Caprese Skewers (5 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p5.webp" alt="Quick Caprese Skewers" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Quick Caprese Skewers (5 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Elegance meets efficiency in this 5-minute appetizer or light snack. Sweet cherry tomatoes, creamy mozzarella, and fragrant basil, drizzled with balsamic glaze. No cooking required, perfect for last-minute entertaining or a healthy bite. Customizable with olives or prosciutto.</p>
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Make homemade balsamic glaze by simmering vinegar. Add dried oregano or minced garlic to olive oil for extra flavor.</p>
+                </div>
+
+                <!-- Recipe 6: 15-Minute Shrimp Scampi with Zucchini Noodles -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p6.webp" alt="15-Minute Shrimp Scampi with Zucchini Noodles" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">15-Minute Shrimp Scampi with Zucchini Noodles</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Restaurant-quality meal in 15 minutes! Succulent shrimp in garlicky, buttery, lemony sauce over light zucchini noodles. A low-carb, high-flavor option that's satisfying and nutritious. Rapid cooking time for shrimp and zoodles makes it quick. Adaptable with regular pasta.</p>
+                  
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Add Parmesan for richer flavor. Whisk in cornstarch for thicker sauce. Perfect for a light yet satisfying meal.</p>
+                </div>
+
+                <!-- Recipe 7: One-Pan Sausage & Veggie Bake (30 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p7.avif" alt="One-Pan Sausage & Veggie Bake" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">One-Pan Sausage & Veggie Bake (30 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Ultimate weeknight dinner with minimal effort. Everything cooks on one baking sheet for easy cleanup and a hearty meal in 30 minutes. Juicy sausages and colorful veggies, seasoned and roasted to perfection. Infinitely customizable with your favorite sausage and vegetables. Naturally gluten-free.</p>
+                   
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Customize veggies based on what you have. Adjust cooking times for denser vegetables. Add red pepper flakes for spice. Great for meal prepping.</p>
+                </div>
+
+                <!-- Recipe 8: Speedy Chicken & Veggie Stir-Fry (20 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p8.avif" alt="Speedy Chicken & Veggie Stir-Fry" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Speedy Chicken & Veggie Stir-Fry (20 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Healthy, flavorful, and incredibly fast dinner in 20 minutes. Lean chicken and colorful, crisp-tender vegetables coated in a savory stir-fry sauce. Fantastic for using leftovers and creating a balanced meal. Adaptable with tofu or beef, and any vegetables. High heat and quick cooking are key.</p>
+                   
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Prep all ingredients beforehand. Add cashews or peanuts for extra protein.</p>
+                </div>
+
+                <!-- Recipe 9: Express Breakfast Burrito (10 Mins) -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p9.avif" alt="Express Breakfast Burrito" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">Express Breakfast Burrito (10 Mins)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">A hearty, portable breakfast ready in just 10 minutes. Fluffy scrambled eggs, savory cheese, and a hint of spice wrapped in a warm tortilla. Perfect for chaotic mornings, providing sustained energy. Customizable with your favorite breakfast meats or vegetables. Quick, delicious, and satisfying.</p>
+
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> For faster prep, microwave eggs directly in the tortilla. Meal prep eggs and fillings ahead of time for fresh burritos daily.</p>
+                </div>
+
+                <!-- Recipe 10: 5-Minute Chocolate Avocado Mousse -->
+                <div class="recipe-card bg-white p-6 rounded-lg shadow-md">
+                    <img src="p10.webp" alt="5-Minute Chocolate Avocado Mousse" class="recipe-image mb-4">
+                    <h3 class="text-2xl font-bold text-primary-red mb-3">5-Minute Chocolate Avocado Mousse</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Rich, creamy, and surprisingly healthy chocolate avocado mousse in just 5 minutes! Transforms ripe avocados into a decadent, dairy-free, vegan treat. Perfect for a healthy dessert craving or quick pick-me-up. Healthy fats and rich chocolate flavor. Customizable sweetness and flavor additions.</p>
+                   
+                    
+                    <p class="text-gray-700 leading-relaxed mt-4"><strong>Chef's Note:</strong> Use very ripe avocados for best texture. A food processor works well. Add peppermint extract for mint chocolate flavor.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Add-Ons Section -->
+    <section class="py-16 bg-gray-100" id="interactive">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-dark-text mb-12">Interactive Tools & Culinary Innovations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ingredient Swap Tool -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary-red mb-4">Ingredient Swap Tool</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Find faster, healthier, or available substitutes for missing ingredients. Your culinary problem-solver for impromptu cooking, dietary restrictions, or experimentation. Provides instant, practical suggestions and tips on flavor/texture impact.</p>
+                    <p class="text-gray-700 leading-relaxed"><strong>Example Swaps:</strong></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Buttermilk:</strong> 1 cup milk + 1 tbsp lemon juice or white vinegar (let sit 5 mins).</li>
+                        <li><strong>Heavy Cream:</strong> Cashew cream (blended cashews + water) or coconut milk.</li>
+                        <li><strong>Eggs (baking):</strong> 1 tbsp ground flaxseed + 3 tbsp water (let sit 5 mins) per egg.</li>
+                        <li><strong>All-Purpose Flour (gluten-free):</strong> Almond flour, oat flour, or a gluten-free blend.</li>
+                        <li><strong>Fresh Herbs:</strong> Use 1/3 amount of dried herbs (e.g., 1 tsp dried oregano for 1 tbsp fresh).</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Meal Generator -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary-red mb-4">Quick Meal Generator</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Banish meal-planning woes! Click to instantly get a random 10-minute recipe suggestion. Perfect for when you're hungry but uninspired, or want to discover new quick recipes. Pulls from various fast categories, with direct links to recipes.</p>
+                    <p class="text-gray-700 leading-relaxed"><strong>How it works:</strong></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Click the "Spin for a Recipe" button.</li>
+                        <li>A random 10-minute recipe title appears.</li>
+                        <li>Click the recipe title to go directly to its page.</li>
+                    </ul>
+                </div>
+
+                <!-- Snack Tracker -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary-red mb-4">Snack Tracker</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Monitor your daily quick bites to stay on track with dietary goals. Log QuickFoodHub snacks with notes on portion size or how you felt. Fosters awareness and encourages healthier choices. Intuitive interface for quick logging and simple summaries.</p>
+                    <p class="text-gray-700 leading-relaxed"><strong>Features:</strong></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Log QuickFoodHub snacks with timestamps.</li>
+                        <li>Add custom notes for each entry.</li>
+                        <li>View daily and weekly snack summaries.</li>
+                        <li>Identify snacking patterns and make healthier choices.</li>
+                    </ul>
+                </div>
+
+                <!-- One-Min Video Recipes -->
+                <div class="card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary-red mb-4">One-Min Video Recipes</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Super short, scrollable cooking demos showing how to prepare dishes in under 60 seconds. Perfect for visual learners, on-the-go, or when reading feels like too much effort. Highlights key steps and techniques. Optimized for mobile viewing, offering instant inspiration and confidence.</p>
+                    <p class="text-gray-700 leading-relaxed"><strong>What to expect:</strong></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Fast-paced, high-energy cooking demonstrations.</li>
+                        <li>Focus on key steps and visual cues.</li>
+                        <li>Optimized for mobile and quick consumption.</li>
+                        <li>Inspiring and confidence-building.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why QuickFoodHub is Different Section -->
+    <section class="py-16 bg-clean-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-dark-text mb-12">Why QuickFoodHub Stands Apart: Our Unique Promise</h2>
+            <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">
+                <p>QuickFoodHub offers a unique value proposition, built on speed, flavor, and real-life applicability. We are your indispensable partner in the kitchen, different from other recipe sites due to our focused approach:</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-4">
+                    <li><strong>Fast, No-Nonsense Recipes for Real Life:</strong> Minimal prep, straightforward instructions, and quick cooking methods for your hectic schedule.</li>
+                    <li><strong>Laser Focus on Street Food, Snacks, and Express Meals:</strong> Specialization in high-demand categories for unparalleled depth and innovation.</li>
+                    <li><strong>High-Energy, Mobile-First Design:</strong> Seamless, intuitive, and visually engaging experience on any device, optimized for on-the-go browsing.</li>
+                    <li><strong>Bold, Visual, Easy-to-Use Interface:</strong> Stunning photography and clear navigation make finding and executing recipes frictionless.</li>
+                    <li><strong>Appeals to Modern, Fast-Paced Lifestyles:</strong> Practical, delicious, and inspiring culinary content that aligns with your dynamic routines.</li>
+                </ul>
+                <p>QuickFoodHub is more than a recipe website; it's a strategic partner for delicious living, empowering you to eat well, save time, and live fully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="py-16 bg-gray-100" id="disclaimer">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary-red mb-12">Disclaimer</h2>
+            <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">
+                <p>Welcome to QuickFoodHub. By using our website, you agree to this disclaimer. If you disagree, do not use our site.</p>
+
+                <p><strong>General Information Only:</strong> Content on QuickFoodHub (recipes, tips, etc.) is for informational and entertainment purposes only. It is not medical advice. Always consult a healthcare professional for medical or dietary concerns.</p>
+
+                <p><strong>Nutritional Information:</strong> Any nutritional data provided is an estimate. Variations can occur. QuickFoodHub does not guarantee accuracy. Consult a dietitian for specific dietary needs or allergies.</p>
+
+                <p><strong>Allergies and Dietary Restrictions:</strong> Recipes may contain common allergens. You are responsible for managing your own allergies and restrictions. QuickFoodHub is not liable for adverse reactions. Always check ingredient labels.</p>
+
+                <p><strong>Food Safety and Preparation:</strong> Users are responsible for proper food handling and cooking. QuickFoodHub provides guides but is not responsible for illness or injury from improper preparation or consumption.</p>
+
+                <p><strong>External Links:</strong> QuickFoodHub may link to third-party sites. We are not responsible for their content or policies. Links do not imply endorsement. Review their terms and privacy policies.</p>
+
+                <p><strong>Accuracy of Information:</strong> While we strive for accuracy, QuickFoodHub makes no warranties regarding completeness or reliability of information. Your reliance is at your own risk. Content may be modified without notice.</p>
+
+                <p><strong>Intellectual Property:</strong> All content is property of QuickFoodHub or its suppliers, protected by copyright. Unauthorized use is prohibited. Recipes are for personal, non-commercial use only. Contact us for sharing/republishing.</p>
+
+                <p><strong>Limitation of Liability:</strong> QuickFoodHub, its owners, employees, or affiliates are not liable for any loss or damage from website use, including indirect or consequential damages, loss of data/profits, or unauthorized access.</p>
+
+                <p><strong>Changes to Disclaimer:</strong> QuickFoodHub may amend this disclaimer without notice. Continued use means acceptance of changes. Review this page periodically.</p>
+
+                <p><strong>Governing Law:</strong> This disclaimer is governed by Indian law. Disputes are subject to Delhi, India courts.</p>
+
+                <p>By using QuickFoodHub, you accept this disclaimer. Your continued use signifies acceptance of any changes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Satisfaction Section -->
+    <section class="py-16 bg-clean-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-dark-text mb-8">Your Satisfaction, Our Priority</h2>
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 space-y-4">
+                <p>At QuickFoodHub, your satisfaction is our priority. We are committed to providing a seamless, inspiring, and valuable experience. We constantly refine recipes and enhance features. Your feedback helps us improve, ensuring QuickFoodHub meets your expectations. We believe great food experiences should be accessible to everyone. Thank you for being part of our community!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text text-clean-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About QuickFoodHub -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">QuickFoodHub</h3>
+                <p class="text-sm leading-relaxed">Your shortcut to delicious meals and quick bites for every busy moment. Fast. Flavorful. Ready When You Are.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-secondary-mustard transition-colors duration-300">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-secondary-mustard transition-colors duration-300">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-secondary-mustard transition-colors duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-secondary-mustard transition-colors duration-300">Terms of Service</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary-mustard transition-colors duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Connect -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Get in Touch</h3>
+                <address class="not-italic space-y-2 text-sm mb-4">
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Flavorful Lane, Culinary District</p>
+                    <p>New Delhi, Delhi 110001, India</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@quickfoodhub.com</p>
+                    <p><i class="fas fa-phone-alt mr-2"></i>+91 98765 43210</p>
+                </address>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Connect With Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-8 pt-4 border-t border-gray-700">
+            <p class="text-sm">&copy; 2025 QuickFoodHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

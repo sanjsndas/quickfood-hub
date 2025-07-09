@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact QuickFoodHub — Fast. Flavorful. Ready When You Are.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA; /* Clean White */
+            color: #212121; /* Midnight Black */
+        }
+        .text-primary-red { color: #E53935; }
+        .bg-primary-red { background-color: #E53935; }
+        .text-secondary-mustard { color: #FFEB3B; }
+        .bg-secondary-mustard { background-color: #FFEB3B; }
+        .text-dark-text { color: #212121; }
+        .bg-clean-white { background-color: #FAFAFA; }
+        .text-mint-green { color: #4CAF50; }
+        .bg-mint-green { background-color: #4CAF50; }
+
+        /* Custom styles for better aesthetics and responsiveness */
+        .container {
+            max-width: 1200px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E53935; /* Bold Tomato Red on hover */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #D32F2F; /* Darker red on hover */
+            transform: translateY(-2px);
+        }
+        .contact-section {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .contact-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus, .form-textarea:focus {
+            border-color: #E53935;
+            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #E53935;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #D32F2F;
+        }
+
+        /* Responsive adjustments for text and layout */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .grid-cols-1-md {
+                grid-template-columns: 1fr;
+            }
+            .grid-cols-2-lg {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-cols-3-xl {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-clean-white text-dark-text">
+
+    <!-- Header and Navigation -->
+    <header class="bg-clean-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-red mb-4 md:mb-0">QuickFoodHub</a>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 space-x-3 text-lg font-semibold">
+                    <li><a href="index.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Home</a></li>
+                    <li><a href="blog.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Blog</a></li>
+                    <li><a href="privacy.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Privacy</a></li>
+                    <li><a href="terms.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Terms</a></li>
+                    <li><a href="cookies.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Cookies</a></li>
+                    <li><a href="contact.html" class="nav-link text-dark-text hover:text-primary-red rounded-md px-3 py-2">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="relative bg-cover bg-center h-64 md:h-80 flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
+        <div class="container mx-auto px-4 text-center z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Connect with QuickFoodHub</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">We're here to help! Reach out for any questions, feedback, or collaboration ideas.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="py-16 bg-clean-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-primary-red mb-12">Get in Touch with QuickFoodHub</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-8">At QuickFoodHub, we are passionate about creating a seamless and delightful experience for all our users. Your feedback, questions, and ideas are incredibly valuable to us as they help us to continuously improve our platform and deliver the best possible fast and flavorful food inspiration. Whether you have a burning question about a recipe, a suggestion for a new feature, a partnership inquiry, or simply want to share your culinary success story, we're eager to hear from you. We believe that open communication is key to building a vibrant and supportive community around quick and delicious meals. Please use the contact methods below to reach out, and our dedicated team will do their best to respond to your inquiry as quickly and efficiently as possible. We are committed to providing timely and helpful support, ensuring that your experience with QuickFoodHub is always positive and productive. Your satisfaction is our top priority, and we look forward to connecting with you!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold text-dark-text mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Regarding a recipe / Partnership inquiry" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn rounded-md px-6 py-3">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Direct Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-dark-text mb-6">Direct Contact Information</h3>
+                    <div class="space-y-4 text-lg text-gray-700">
+                        <p><i class="fas fa-envelope text-primary-red mr-3"></i><strong>Email:</strong> <a href="mailto:info@quickfoodhub.com" class="text-primary-red hover:underline">info@quickfoodhub.com</a></p>
+                        <p class="text-sm text-gray-600 ml-6">For all general inquiries, feedback, or non-urgent matters. We aim to respond to emails within 24-48 business hours. Please provide as much detail as possible in your email to help us assist you efficiently. This includes relevant recipe names, screenshots of any issues, or specific questions you might have. We appreciate your patience as we work through all incoming communications to provide thoughtful and comprehensive responses.</p>
+
+                        <p><i class="fas fa-phone-alt text-primary-red mr-3"></i><strong>Phone:</strong> <a href="tel:+919876543210" class="text-primary-red hover:underline">+91 98765 43210</a></p>
+                        <p class="text-sm text-gray-600 ml-6">Available during business hours (Monday-Friday, 9:00 AM - 5:00 PM IST). For urgent matters or direct assistance, our phone lines are open. Please note that during peak hours, you might experience a short wait. We recommend having your query prepared to ensure a swift and effective conversation with our support team. Our representatives are trained to assist with a wide range of topics, from account issues to recipe clarifications.</p>
+
+                        <p><i class="fas fa-map-marker-alt text-primary-red mr-3"></i><strong>Address:</strong></p>
+                        <address class="not-italic text-lg text-gray-700 ml-6">
+                            <p>QuickFoodHub Headquarters</p>
+                            <p>123 Flavorful Lane, Culinary District</p>
+                            <p>New Delhi, Delhi 110001, India</p>
+                        </address>
+                        <p class="text-sm text-gray-600 ml-6">While we primarily operate online, you can use this address for official correspondence. Please do not send unsolicited products or food samples without prior arrangement. For any physical mail, ensure it is clearly addressed to the relevant department or individual if known. Our physical location serves as our administrative hub, managing the operations and strategic development of QuickFoodHub. We do not offer walk-in services at this address.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="text-3xl font-bold text-dark-text mb-6">Specific Inquiry Types</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">To ensure your message reaches the right department and receives the most efficient response, please consider the following categories when contacting us. Providing specific details helps us to address your inquiry with precision and speed, aligning with our commitment to fast and flavorful solutions in every aspect of QuickFoodHub.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">General Inquiries & Feedback</h3>
+                        <p class="text-gray-700 leading-relaxed">Have a general question about QuickFoodHub, our mission, or just want to share your thoughts? This is the place! We welcome all forms of feedback, whether it's praise for a favorite recipe, a suggestion for improving the website, or a general comment about your experience. Your insights are invaluable as we continually strive to enhance our platform and ensure it meets the evolving needs of our community. Please use the contact form or email us directly for these types of communications. We read every piece of feedback carefully and consider it in our ongoing development efforts. Your voice truly matters in shaping the future of QuickFoodHub.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">Recipe Support & Suggestions</h3>
+                        <p class="text-gray-700 leading-relaxed">Struggling with a particular recipe? Have a question about an ingredient substitution? Or perhaps you have a brilliant idea for a new quick recipe you'd love to see on QuickFoodHub? Our culinary team is here to assist! We understand that even the fastest recipes can sometimes present challenges, and we're committed to helping you achieve culinary success. Feel free to ask for clarifications, tips, or share your own modifications. We also love receiving suggestions for new quick recipes, street food inspirations, or snack hacks. Your creativity fuels our content, and we're always looking for innovative ways to bring more fast and flavorful ideas to our users. Please specify the recipe name if your query is about an existing one.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">Partnership & Collaboration Opportunities</h3>
+                        <p class="text-gray-700 leading-relaxed">QuickFoodHub is always open to exploring exciting partnerships and collaborations that align with our brand values of speed, flavor, and convenience. If you are a food blogger, content creator, brand, or business interested in working with us on sponsored content, recipe development, joint promotions, or any other synergistic ventures, please reach out. We are particularly interested in collaborations that can bring added value to our community, whether through innovative kitchen products, sustainable food initiatives, or engaging culinary experiences. Please provide a brief overview of your proposal and your organization, and our business development team will review it promptly. We believe in fostering mutually beneficial relationships that can help both parties grow and reach new audiences.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">Media & Press Inquiries</h3>
+                        <p class="text-gray-700 leading-relaxed">For all media inquiries, press releases, interview requests, or requests for official statements regarding QuickFoodHub, please contact our media relations team. We are happy to provide information about our brand concept, unique selling propositions, user demographics, and future initiatives. Please include your publication/outlet, the nature of your inquiry, and your deadline in your message to ensure a timely response. We are keen to share the QuickFoodHub story with the wider world and highlight how we are revolutionizing the way people approach fast and flavorful cooking. Our team is equipped to provide comprehensive information and insights into the growing trend of convenient culinary solutions.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">Technical Support & Website Issues</h3>
+                        <p class="text-gray-700 leading-relaxed">Encountering a technical glitch? Is a page not loading correctly, or are you having trouble with an interactive feature? Our technical support team is here to help resolve any website-related issues you might experience. Please provide a detailed description of the problem, including the browser you are using, your operating system, and any error messages you received. Screenshots or a short video demonstrating the issue can be extremely helpful in diagnosing and resolving the problem quickly. Your reports help us maintain a robust and smooth-running platform for everyone. We are dedicated to ensuring that your QuickFoodHub experience is free from technical disruptions, allowing you to focus solely on your culinary adventures.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-dark-text mb-3">Data Privacy Concerns</h3>
+                        <p class="text-gray-700 leading-relaxed">Your privacy is paramount to us. If you have any questions or concerns regarding our data collection practices, how your personal information is used, or wish to exercise your data privacy rights (such as accessing, correcting, or deleting your data), please refer to our comprehensive <a href="privacy.html" class="text-primary-red hover:underline">Privacy Policy</a> first. If your concerns are not addressed there, or you require further assistance, please do not hesitate to contact our Data Protection Officer. We are committed to transparency and compliance with all applicable data protection regulations. We take all privacy inquiries seriously and will respond with the utmost care and diligence. Your trust in our handling of your personal data is fundamental to our relationship.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section text-center">
+                <h2 class="text-3xl font-bold text-dark-text mb-6">Connect with QuickFoodHub on Social Media</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">Follow us on our social media channels to stay updated with the latest quick recipes, behind-the-scenes glimpses, interactive polls, and culinary challenges. It's a great way to join our vibrant community, share your own quick food creations, and get inspired daily!</p>
+                <div class="flex justify-center space-x-6 text-4xl">
+                    <a href="#" class="text-dark-text hover:text-primary-red transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="text-dark-text hover:text-primary-red transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="text-dark-text hover:text-primary-red transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#" class="text-dark-text hover:text-primary-red transition-colors duration-300" aria-label="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                    <a href="#" class="text-dark-text hover:text-primary-red transition-colors duration-300" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a>
+                </div>
+                <p class="text-sm text-gray-600 mt-6">While we monitor our social media channels, for specific inquiries requiring a direct response, please use the contact form or email provided above. Social media is best for community engagement and quick updates.</p>
+            </div>
+
+            <p class="text-lg leading-relaxed text-gray-700 text-center mt-12">Thank you for your interest in QuickFoodHub. We value your connection and look forward to helping you make every meal fast, flavorful, and ready when you are!</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-text text-clean-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About QuickFoodHub -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">QuickFoodHub</h3>
+                <p class="text-sm leading-relaxed">Your shortcut to delicious meals and quick bites for every busy moment. Fast. Flavorful. Ready When You Are.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-secondary-mustard transition-colors duration-300">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-secondary-mustard transition-colors duration-300">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-secondary-mustard transition-colors duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-secondary-mustard transition-colors duration-300">Terms of Service</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary-mustard transition-colors duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Connect -->
+            <div>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Get in Touch</h3>
+                <address class="not-italic space-y-2 text-sm mb-4">
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Flavorful Lane, Culinary District</p>
+                    <p>New Delhi, Delhi 110001, India</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@quickfoodhub.com</p>
+                    <p><i class="fas fa-phone-alt mr-2"></i>+91 98765 43210</p>
+                </address>
+                <h3 class="text-xl font-bold text-primary-red mb-4">Connect With Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#" class="hover:text-secondary-mustard transition-colors duration-300" aria-label="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-8 pt-4 border-t border-gray-700">
+            <p class="text-sm">&copy; 2025 QuickFoodHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
