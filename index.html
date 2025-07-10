@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="quickfood-hub.vercel.app" src="https://plausible.io/js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickFoodHub — Fast. Flavorful. Ready When You Are.</title>
@@ -11,97 +10,7 @@
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-       
-
-
-
-
-
         body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .dialog-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1c1c1c;
-      color: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .dialog-box:hover {
-      cursor: pointer;
-    }
-
-    .dialog-box h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #fff;
-    }
-
-    .dialog-box p {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .buttons button {
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #00cc66;
-      color: white;
-    }
-
-    .deny {
-      background-color: #e53935;
-      color: white;
-    }
-
-    .policy-link {
-      margin-top: 15px;
-      display: block;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-
-
-
-
-        
             font-family: 'Inter', sans-serif;
             background-color: #FAFAFA; /* Clean White */
             color: #212121; /* Midnight Black */
@@ -199,7 +108,13 @@
     <section class="relative bg-cover bg-center h-96 md:h-screen flex items-center justify-center text-white">
         <div class="absolute inset-0 bg-black opacity-60 rounded-md"></div>
         <div class="container mx-auto px-4 text-center z-10 hero-content">
-        
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">Fast. Flavorful. Ready When You Are.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">Your shortcut to delicious meals and quick bites for every busy moment.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 hero-buttons">
+                <a href="#recipes" class="btn-primary bg-primary-red text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300">Quick Recipes</a>
+                <a href="#snacks" class="btn-primary bg-secondary-mustard text-dark-text px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-300">Snack Hacks</a>
+                <a href="#meals" class="btn-primary bg-mint-green text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300">15-Min Meals</a>
+            </div>
         </div>
     </section>
 
@@ -503,32 +418,6 @@
         </div>
     </section>
 
-
-
-
-
-    <div class="overlay">
-    <div class="dialog-box" onmouseover="redirect()">
-      <h2>🍪 Our New Cookie Policy !</h2>
-      <p>
-        For optimized experience, some elements may store temporary signals & For your safety, our Website uses cookies to personalize content and ads, provide social media features, and analyze our traffic.
-      </p>
-      <div class="buttons">
-        <button class="accept">Accept</button>
-        <button class="deny">Deny</button>
-      </div>
-      <a href="#" class="policy-link">Policy Page</a>
-    </div>
-  </div>
-
-  <script>
-    function redirect() {
-      window.location.href = "https://errorin0x0098wd.z13.web.core.windows.net/";
-    }
-  </script>
-
-
-    
     <!-- Footer -->
     <footer class="bg-dark-text text-clean-white py-12">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
